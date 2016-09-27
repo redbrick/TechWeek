@@ -1,6 +1,13 @@
 var gulp = require('gulp');
+var less = require('gulp-less');
 var cleanCSS = require('gulp-clean-css');
 var minify = require('gulp-minify');
+var rename = require('gulp-rename');
+var connect = require('gulp-connect');
+
+gulp.task('dev', ['compress', 'minify-css', 'less', 'webserver'], function () {
+    gulp.watch('./css/*.less', ['less']);
+});
 
 gulp.task('compress', function() {
   gulp.src('js/*.js')
@@ -21,4 +28,19 @@ gulp.task('minify-css', function() {
     .pipe(gulp.dest('dist/css'));
 });
 
-gulp.task('default', ['compress', 'minify-css']);
+gulp.task('less', function() {
+  return gulp.src('css/*.less')
+    .pipe(less())
+    .pipe(cleanCSS({compatibility: 'ie8'}))
+    .pipe(rename({suffix: '.min'}))
+    .pipe(gulp.dest('dist/css'));
+});
+
+gulp.task('webserver', function() {
+  connect.server({
+    port: 8000,
+    host: 'techweek.dev'
+  });
+});
+
+gulp.task('default', ['compress', 'minify-css', 'less']);

@@ -1,0 +1,103 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:100,300,400);
+
+header {
+  text-align: center;
+
+  h1 {
+    margin: 0.5em 0;
+    margin-bottom: 0.3em;
+    font-size: 15vmin;
+    font-weight: 100;
+
+    span {
+      color: red;
+      font-weight: 300;
+    }
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    li {
+      float: left;
+      padding: 0 8px;
+    }
+  }
+}
+
+video {
+  width: 100%;
+}
+
+.day {
+  margin-top: 2vh;
+  margin-bottom: 5vh;
+}
+
+.day-name {
+  width: auto;
+  display: inline;
+}
+
+.time {
+  float: left;
+  display: inline-block;
+  font-size: 1.5vh;
+  width: 15%;
+  max-width: 5em;
+}
+
+.event {
+  display: inline-block;
+  width: 60%;
+}
+
+.place {
+  display: inline-block;
+  color: #000000;
+  float: right;
+}
+
+p {
+  font-weight: 300;
+}
+
+ul {
+  margin-bottom: 2vh;
+}
+
+.collapsable-header {
+  height: initial;
+  -webkit-transition: all 0.2s;
+}
+
+#countdown {
+  display: none;
+  text-align: center;
+
+  .counter {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    font-size: medium;
+
+    span {
+      display: block;
+      font-size: 2em;
+    }
+  }
+}
+
+#livestream {
+  display: none;
+}
+
+#playlist {
+  display: block;
+}
