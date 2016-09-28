@@ -1,5 +1,8 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:100,300,400);
 
+@card-width: 624px;
+@large-phone: 560px;
+
 header {
   text-align: center;
 
@@ -131,5 +134,21 @@ ul {
 
   .collapsible-header {
     border-bottom: 1px solid #ddd;
+  }
+}
+
+.card-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .events {
+    width: 80%;
+    @media screen and (max-width: @large-phone) {
+      width: 100%;
+    }
+    @media screen and (min-width: 800px) {
+      max-width: @card-width;
+    }
   }
 }

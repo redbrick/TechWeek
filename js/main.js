@@ -93,7 +93,7 @@ function loadEvents(days){
     var day = days[i];
     var ds = day.day+'-event';
     var ul = day.day+'-events';
-    var de = $('<li><div id="'+day.day+'" class="collapsible-header container day"><h4 class="tooltipped day-name" data-position="right" data-tooltip="'+day.description+'">'+day.day+'</h4></div><div class="collapsible-body"><ul id="'+ul+'"class="collapsible sub-collapsible" data-collepsible="accordion"></div></ul>').appendTo(ce);
+    var de = $('<li><div id="'+day.day+'" class="collapsible-header container day"><h5 class="day-name" data-position="right">'+day.day+' - '+day.description+'</h5></div><div class="collapsible-body"><ul id="'+ul+'"class="collapsible sub-collapsible" data-collepsible="accordion"></div></ul>').appendTo(ce);
 
     for(var j = 0; j < day.events.length; j++){
       var event = day.events[j];
@@ -114,7 +114,7 @@ function loadEvents(days){
     }
   }
 
-  $('h4').each( function( c ){
+  $('h5').each( function( c ){
     $(this).css({color: colors[(v+c) % 5]});
   });
 
