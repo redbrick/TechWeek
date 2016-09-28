@@ -6,7 +6,7 @@ var rename = require('gulp-rename');
 var connect = require('gulp-connect');
 
 gulp.task('dev', ['compress', 'minify-css', 'less', 'webserver'], function () {
-    gulp.watch('./css/*.less', ['less']);
+    gulp.watch(['./css/*.less', './js/*.js'], ['less', 'compress']);
 });
 
 gulp.task('compress', function() {

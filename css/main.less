@@ -31,14 +31,16 @@ header {
   }
 }
 
+body {
+  background-color: #eee;
+}
+
 video {
   width: 100%;
 }
 
 .day {
-  margin-top: 2vh;
-  margin-bottom: 5vh;
-  padding: 0;
+  margin-top: 1vh;
 }
 
 .day-name {
@@ -46,23 +48,27 @@ video {
   display: inline;
 }
 
-.time {
-  float: left;
-  display: inline-block;
-  font-size: 1.5vh;
-  width: 15%;
-  max-width: 5em;
-}
+.event-card {
+  display: flex;
+  .time {
+    float: left;
+    display: inline-block;
+    font-size: 1.5vh;
+    width: 15%;
+    margin-right: 1em;
+    max-width: 5em;
+  }
 
-.event {
-  display: inline-block;
-  width: 60%;
-}
+  .event {
+    display: inline-block;
+    width: 80%;
+  }
 
-.place {
-  display: inline-block;
-  color: #000000;
-  float: right;
+  .place {
+    display: inline-block;
+    color: #000000;
+    float: right;
+  }
 }
 
 p {
@@ -73,9 +79,12 @@ ul {
   margin-bottom: 2vh;
 }
 
-.collapsable-header {
+.collapsible-header {
   height: initial;
   -webkit-transition: all 0.2s;
+  border-bottom: 0;
+  line-height: 1.5rem;
+  padding: 1em,
 }
 
 #countdown {
@@ -103,6 +112,24 @@ ul {
   display: block;
 }
 
-.container {
-  padding: 0;
+.collapsible.popout>li {
+  background-color: #fff;
+}
+
+.collapsible.popout>li.active {
+  margin: 16px;
+}
+
+.collapsible-body {
+  border-bottom: 0px;
+
+  .collapsible {
+    box-shadow: 0 0;
+    border-right: 0;
+    border-left: 0;
+  }
+
+  .collapsible-header {
+    border-bottom: 1px solid #ddd;
+  }
 }

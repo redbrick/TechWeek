@@ -93,17 +93,14 @@ function loadEvents(days){
     var day = days[i];
     var ds = day.day+'-event';
     var ul = day.day+'-events';
-    var de = $('<div id="'+day.day+'" class="container day"></div>').appendTo(ce);
-
-    de.append('<h4 class="tooltipped day-name" data-position="right" data-tooltip="'+day.description+'">'+day.day+'</h4>');
-    de.append('<ul id="'+ul+'"class="collapsible" data-collepsible="accordion"></ul>');
+    var de = $('<li><div id="'+day.day+'" class="collapsible-header container day"><h4 class="tooltipped day-name" data-position="right" data-tooltip="'+day.description+'">'+day.day+'</h4></div><div class="collapsible-body"><ul id="'+ul+'"class="collapsible sub-collapsible" data-collepsible="accordion"></div></ul>').appendTo(ce);
 
     for(var j = 0; j < day.events.length; j++){
       var event = day.events[j];
       var by = (event.by.length === 0) ? '' : 'By: <i>' + event.by + '</i>';
       $('#'+ul).append(
         '<li>'+
-          '<div class=\'collapsible-header\'>' +
+          '<div class=\'collapsible-header event-card\'>' +
             '<div class=\'time\'>'+ event.time + '</div>' +
             '<div class=\'event\'>' + event.name + '</div>' +
             '<div class=\'place\'>' + event.place.id + '</div>' +
@@ -123,21 +120,4 @@ function loadEvents(days){
 
   $('.collapsible').collapsible();
   $('.tooltipped').tooltip({delay: 10});
-  $('.events .collapsible-header').each(function( ix ){
-    $(this).css({
-      height: 'initial',
-      'line-height': '1.5rem',
-      'padding': '1em',
-      '-webkit-transition':'all 0.2s'
-    });
-  });
-
-  $('ul').each( function ( c ){
-    var all = this;
-    $('.collapsible-header', all).click( function(){
-      $('.collapsible-header', all).not(this).css({'background-color': 'rgb(255, 255, 255)'});
-      var col = ($(this).css('background-color') == 'rgb(255, 255, 255)') ? colors[(v+c)%5] : 'rgb(255, 255, 255)';
-      $(this).css({'background-color': col});
-    });
-  });
 }

@@ -21,7 +21,7 @@
         "description": "To Be Announced"
     }, {
         "name": "Tales of success o.O",
-        "by": " Terrence Bolt & Cian Butler",
+        "by": " Terry Bolt & Cian Butler",
         "time": "1:00pm",
         "place": {
             "id": "The Mezz",
@@ -48,6 +48,7 @@
         "description": " Another Project"
     }, {
         "name": "To Be Announced",
+        "by": "",
         "time": "4:00pm",
         "place": {
             "id": "The Mezz",
