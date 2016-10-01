@@ -1,8 +1,6 @@
 @import url(//fonts.googleapis.com/css?family=Roboto:100,300,400);
 @import "variables";
 
-
-
 header {
   text-align: center;
 
@@ -96,7 +94,25 @@ ul {
   -webkit-transition: all 0.2s;
   border-bottom: 0;
   line-height: 1.5rem;
-  padding: 1em,
+  padding: 1em;
+}
+
+.collapsible-body {
+  border-top: 0;
+  border-bottom: 0px;
+
+  .collapsible {
+    box-shadow: 0 0;
+    border: 0;
+
+    &-header {
+      border-top: 1px solid #ddd;
+    }
+
+    &-body {
+      border-top: 1px solid #ddd;
+    }
+  }
 }
 
 .countdown {
@@ -126,24 +142,11 @@ ul {
 
 .collapsible.popout>li {
   background-color: @color-white;
+  margin: 0 16px;
 }
 
 .collapsible.popout>li.active {
-  margin: 16px;
-}
-
-.collapsible-body {
-  border-bottom: 0;
-
-  .collapsible {
-    box-shadow: 0 0;
-    border-right: 0;
-    border-left: 0;
-  }
-
-  .collapsible-header {
-    border-bottom: 1px solid #ddd;
-  }
+  margin: 0 8px;
 }
 
 .card-container {
