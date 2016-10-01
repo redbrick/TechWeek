@@ -38,17 +38,23 @@ Enjoy viewing!
   <body>
     <div class="wrapper">
       <header>
-        <h1><span>Tech</span>Week</h1>
+        <h1 class="title"><a href="/"><span class="title__colour">Tech</span>Week</a></h1>
         <p>Dublin City University 15<sup>th</sup> - 19<sup>th</sup> Febuary 2015</p>
-        <ul><li><a href="../2015">2015</a></li><li><a href="..">Oct 2016</a></li></ul>
+        <ul class="menu">
+          <li class="menu__item">
+            <a href="../2015">2015</a>
+          </li>
+          <li class="menu__item">
+            <a href="..">Oct 2016</a>
+          </li>
+        </ul>
       </header>
-      <!-- 10 minutes before start of the event the livestream will come on -->
-      <div class="container" id="playlist">
+      <div class="container playlist">
         <iframe id="live" src="https://www.youtube.com/embed/videoseries?list=PLPaLJSHTDMFhbDmyUeik6IHXmzVtWQQxu" width="100%" height="400" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" webkitallowfullscreen="" allowfullscreen=""></iframe>
       </div>
       <!-- All events are loaded into this element -->
       <div class="card-container">
-        <ul class="collapsible popout events" data-collapsible="accordion"></ul>
+        <ul class="collapsible popout card-container__events" data-collapsible="accordion"></ul>
       </div>
     </div>
     <!-- The script is loaded and ran -->

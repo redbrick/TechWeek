@@ -24,14 +24,14 @@ gulp.task('compress', function() {
 
 gulp.task('minify-css', function() {
   return gulp.src('css/*.css')
-    .pipe(cleanCSS({compatibility: 'ie8'}))
+    .pipe(cleanCSS({compatibility: 'ie8', processImport: false}))
     .pipe(gulp.dest('dist/css'));
 });
 
 gulp.task('less', function() {
   return gulp.src('css/*.less')
     .pipe(less())
-    .pipe(cleanCSS({compatibility: 'ie8'}))
+    .pipe(cleanCSS({compatibility: 'ie8', processImport: false}))
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('dist/css'));
 });

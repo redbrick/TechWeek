@@ -38,14 +38,21 @@ Enjoy viewing!
   <body>
     <div class="wrapper">
       <header>
-        <h1><span>Tech</span>Week</h1>
+        <h1 class="title"><a href="/"><span class="title__colour">Tech</span>Week</a></h1>
         <p>Dublin City University 24<sup>th</sup> - 28<sup>th</sup> October 2016</p>
-        <ul><li><a href="./2016">Feb 2016</a></li><li><a href="./2015">2015</a></li></ul>
+        <ul class="menu">
+          <li class="menu__item">
+            <a href="./2016">Feb 2016</a>
+          </li>
+          <li>
+            <a href="./2015">2015</a>
+          </li>
+        </ul>
       </header>
       <!-- Countdown is show up to 10 minutes before the event -->
-      <div id="countdown">
+      <div class="countdown">
         TechWeek Starts in:
-        <div class="counter">
+        <div class="countdown__counter">
           <span>&nbsp;</span>
           <span>&nbsp;</span>
           <span>&nbsp;</span>
@@ -53,14 +60,14 @@ Enjoy viewing!
         </div>
       </div>
       <!-- 10 minutes before start of the event the livestream will come on -->
-      <div class="container" id="livestream">
+      <div class="container livestream">
         <video id="live" controls poster="https://www.redbrick.dcu.ie/includes/images/logo.png">
           <source src="">
         </video>
       </div>
       <!-- All events are loaded into this element -->
       <div class="card-container">
-        <ul class="collapsible popout events" data-collapsible="accordion"></ul>
+        <ul class="collapsible popout card-container__events" data-collapsible="accordion"></ul>
       </div>
     </div>
     <!-- The script is loaded and ran -->

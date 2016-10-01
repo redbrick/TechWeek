@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Roboto:100,300,400);
+@import url(//fonts.googleapis.com/css?family=Roboto:100,300,400);
 
 @card-width: 624px;
 @large-phone: 560px;
@@ -6,28 +6,32 @@
 header {
   text-align: center;
 
-  h1 {
+  .title {
     margin: 0.5em 0;
     margin-bottom: 0.3em;
     font-size: 15vmin;
     font-weight: 100;
 
-    span {
+    &__colour {
       color: red;
       font-weight: 300;
     }
+
+    a {
+      color: black;
+    }
   }
 
-  ul {
+  .menu {
     list-style-type: none;
-    margin: 0;
+    margin: 8px 0;
     padding: 0;
     overflow: hidden;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 
-    li {
+    &__item {
       float: left;
       padding: 0 8px;
     }
@@ -53,7 +57,7 @@ video {
 
 .event-card {
   display: flex;
-  .time {
+  &__time {
     float: left;
     display: inline-block;
     font-size: 1.5vh;
@@ -62,12 +66,12 @@ video {
     max-width: 5em;
   }
 
-  .event {
+  &__event {
     display: inline-block;
     width: 80%;
   }
 
-  .place {
+  &__place {
     display: inline-block;
     color: #000000;
     float: right;
@@ -90,11 +94,11 @@ ul {
   padding: 1em,
 }
 
-#countdown {
+.countdown {
   display: none;
   text-align: center;
 
-  .counter {
+  &__counter {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -107,11 +111,11 @@ ul {
   }
 }
 
-#livestream {
+.livestream {
   display: none;
 }
 
-#playlist {
+.playlist {
   display: block;
 }
 
@@ -142,7 +146,7 @@ ul {
   align-items: center;
   justify-content: center;
 
-  .events {
+  &__events {
     width: 80%;
     @media screen and (max-width: @large-phone) {
       width: 100%;

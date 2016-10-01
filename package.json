@@ -25,7 +25,7 @@
     "gulp-clean-css": "^2.0.12",
     "gulp-connect": "^5.0.0",
     "gulp-less": "^3.1.0",
-    "gulp-rename": "^1.2.2",
-    "gulp-minify": "0.0.14"
+    "gulp-minify": "0.0.14",
+    "gulp-rename": "^1.2.2"
   }
 }
