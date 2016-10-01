@@ -1,21 +1,174 @@
 [{
   "day": "Monday",
   "description": "Data",
-  "events": []
+  "events": [{
+    "name": "Opening Event",
+    "by": "Redbrick DCU's Computer Networking Society",
+    "time": "11:45",
+    "place": {
+      "id": "The Mezz",
+      "map": "Somewhere in DCU"
+    },
+    "description": "Opening of TechWeek 2016, October edition"
+  },{
+    "name": "TBA",
+    "by": "TBA",
+    "time": "12:00",
+    "place": {
+      "id": "The Mezz",
+      "map": ""
+    },
+    "description": "TBA"
+  }, {
+    "name": "Lunch",
+    "by": "",
+    "time": "14:00",
+    "place": {
+      "id": "The Mezz",
+      "map": ""
+    },
+    "description": "Lunch Time!"
+  },{
+    "name": "TBA",
+    "by": "TBA",
+    "time": "15:00",
+    "place": {
+      "id": "The Mezz",
+      "map": ""
+    },
+    "description": "TBA"
+  }]
 }, {
   "day": "Tuesday",
   "description": "Mobile Development",
-  "events": []
+  "events": [{
+    "name": "TBA",
+    "by": "TBA",
+    "time": "12:00",
+    "place": {
+      "id": "The Mezz",
+      "map": ""
+    },
+    "description": "TBA"
+  }, {
+    "name": "Lunch",
+    "by": "",
+    "time": "14:00",
+    "place": {
+      "id": "The Mezz",
+      "map": ""
+    },
+    "description": "Lunch Time!"
+  },{
+    "name": "TBA",
+    "by": "TBA",
+    "time": "15:00",
+    "place": {
+      "id": "The Mezz",
+      "map": ""
+    },
+    "description": "TBA"
+  }]
 }, {
   "day": "Wednesday",
   "description": "Networks and IoT",
-  "events": []
+  "events": [{
+    "name": "TBA",
+    "by": "TBA",
+    "time": "12:00",
+    "place": {
+      "id": "The Mezz",
+      "map": ""
+    },
+    "description": "TBA"
+  }, {
+    "name": "Lunch",
+    "by": "",
+    "time": "14:00",
+    "place": {
+      "id": "The Mezz",
+      "map": ""
+    },
+    "description": "Lunch Time!"
+  },{
+    "name": "TBA",
+    "by": "TBA",
+    "time": "15:00",
+    "place": {
+      "id": "The Mezz",
+      "map": ""
+    },
+    "description": "TBA"
+  }]
 }, {
   "day": "Thursday",
   "description": "STEM",
-  "events": []
+  "events": [{
+    "name": "TBA",
+    "by": "TBA",
+    "time": "12:00",
+    "place": {
+      "id": "The Mezz",
+      "map": ""
+    },
+    "description": "TBA"
+  }, {
+    "name": "Lunch",
+    "by": "",
+    "time": "14:00",
+    "place": {
+      "id": "The Mezz",
+      "map": ""
+    },
+    "description": "Lunch Time!"
+  },{
+    "name": "TBA",
+    "by": "TBA",
+    "time": "15:00",
+    "place": {
+      "id": "The Mezz",
+      "map": ""
+    },
+    "description": "TBA"
+  }]
 }, {
   "day": "Friday",
   "description": "Lightning Talks",
-  "events": []
+  "events": [{
+    "name": "TBA",
+    "by": "TBA",
+    "time": "12:00",
+    "place": {
+      "id": "The Mezz",
+      "map": ""
+    },
+    "description": "TBA"
+  }, {
+    "name": "Lunch",
+    "by": "",
+    "time": "14:00",
+    "place": {
+      "id": "The Mezz",
+      "map": ""
+    },
+    "description": "Lunch Time!"
+  }, {
+    "name": "Self Hosted IFTTT",
+    "by": "creadak - Craig Gavagan Mac Entee",
+    "time": "15:00",
+    "place": {
+        "id": "The Mezz",
+        "map": "Somewhere in DCU"
+    },
+    "description": "IFTTT. If This Then That. Five simple little words that help you automate your web applications. NodeRED is basically IFTTT. But on steroids. Craig'll show you how to wire some boxes together to do cool things"
+  },{
+    "name": "TBA",
+    "by": "TBA",
+    "time": "16:00",
+    "place": {
+      "id": "The Mezz",
+      "map": ""
+    },
+    "description": "TBA"
+  }]
 }]
