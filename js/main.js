@@ -89,13 +89,13 @@ function showLive(){
 // Load the events from the file and add them to the page
 function loadEvents(days){
   var ce = $('.card-container__events');
-  for(var i = 0; i < days.length; i++){
+  for(var i = 0; i < days.length; i++) {
     var day = days[i];
     var ds = day.day+'-event';
     var ul = day.day+'-events';
     var de = $('<li><div id="'+day.day+'" class="collapsible-header container day"><h5 class="day-name" data-position="right">'+day.day+' - '+day.description+'</h5></div><div class="collapsible-body"><ul id="'+ul+'"class="collapsible sub-collapsible" data-collepsible="accordion"></div></ul>').appendTo(ce);
 
-    for(var j = 0; j < day.events.length; j++){
+    for(var j = 0; j < day.events.length; j++) {
       var event = day.events[j];
       var by = (event.by.length === 0) ? '' : 'By: <i>' + event.by + '</i>';
       $('#'+ul).append(

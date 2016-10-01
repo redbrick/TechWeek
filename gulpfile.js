@@ -6,7 +6,7 @@ var rename = require('gulp-rename');
 var connect = require('gulp-connect');
 
 gulp.task('dev', ['compress', 'minify-css', 'less', 'webserver'], function () {
-    gulp.watch(['./css/*.less', './js/*.js'], ['less', 'compress']);
+    gulp.watch(['./css/*.less', './js/*.js', './**/*.html'], ['less', 'compress', 'html']);
 });
 
 gulp.task('compress', function() {
@@ -39,8 +39,14 @@ gulp.task('less', function() {
 gulp.task('webserver', function() {
   connect.server({
     port: 8000,
-    host: 'techweek.dev'
+    host: 'techweek.dev',
+    livereload: true
   });
+});
+
+gulp.task('html', function () {
+  gulp.src('./**/*.html')
+    .pipe(connect.reload());
 });
 
 gulp.task('default', ['compress', 'minify-css', 'less']);
