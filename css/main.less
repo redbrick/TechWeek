@@ -1,7 +1,7 @@
 @import url(//fonts.googleapis.com/css?family=Roboto:100,300,400);
+@import "variables";
 
-@card-width: 624px;
-@large-phone: 560px;
+
 
 header {
   text-align: center;
@@ -13,12 +13,12 @@ header {
     font-weight: 100;
 
     &__colour {
-      color: red;
+      color: @color-red;
       font-weight: 300;
     }
 
     a {
-      color: black;
+      color: @color-black;
     }
   }
 
@@ -39,7 +39,7 @@ header {
 }
 
 body {
-  background-color: #eee;
+  background-color: @color-grey;
 }
 
 video {
@@ -78,7 +78,7 @@ video {
 
   &__place {
     display: inline-block;
-    color: #000000;
+    color: @color-black;
     float: right;
   }
 }
@@ -125,7 +125,7 @@ ul {
 }
 
 .collapsible.popout>li {
-  background-color: #fff;
+  background-color: @color-white;
 }
 
 .collapsible.popout>li.active {
@@ -133,7 +133,7 @@ ul {
 }
 
 .collapsible-body {
-  border-bottom: 0px;
+  border-bottom: 0;
 
   .collapsible {
     box-shadow: 0 0;
