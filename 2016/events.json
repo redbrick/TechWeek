@@ -1,77 +1,59 @@
 [{
     "day": "Monday",
-    "description": "HubSpot",
+    "description": "Associates",
     "events": [{
         "name": "Opening Event",
         "by": "Redbrick DCU's Computer Networking Society",
-        "time": "11:45am",
+        "time": "13:00",
         "place": {
             "id": "The Mezz",
             "map": "Somewhere in DCU"
         },
         "description": "Opening of TechWeek 2015"
     }, {
-        "name": "To Be Announced",
-        "by": "To Be Announced",
-        "time": "12:00pm",
-        "place": {
-            "id": "The Mezz",
-            "map": ""
-        },
-        "description": "To Be Announced"
-    }, {
-        "name": "Tales of success o.O",
-        "by": " Terry Bolt & Cian Butler",
-        "time": "1:00pm",
-        "place": {
-            "id": "The Mezz",
-            "map": ""
-        },
-        "description": "No, we're not lying, we've made some huge progress since the Tales of Fail last year. We'll be talking about Redbrick 2.0, what we've done to date and what we have left to do. "
-    }, {
         "name": "Lunch",
         "by": "",
-        "time": "2:00pm",
+        "time": "14:00",
         "place": {
             "id": "The Mezz",
             "map": ""
         },
-        "description": "Time for a break"
+        "description": "Lunch Time!"
     }, {
-        "name": "To Be Announced",
-        "by": "To Be Announced",
-        "time": "3:00pm",
+        "name": "Competitive Programming = Money",
+        "by": "Cian Ruane & Noah Donnelly",
+        "time": "15:00",
         "place": {
             "id": "The Mezz",
             "map": ""
         },
-        "description": " Another Project"
+        "description": "Where do you picture yourself in 5 years? How’s your relationship with your parents? Do you feel a longing for meaning and direction in your life? In this talk Cian Ruane and Noah Donnelly will introduce you to the world of competitive programming."
     }, {
-        "name": "To Be Announced",
-        "by": "",
-        "time": "4:00pm",
+        "name": "Fergus O'Dea (NDRC)",
+        "by": "Fergus O'Dea",
+        "time": "16:00",
         "place": {
             "id": "The Mezz",
             "map": ""
         },
-        "description": ""
+        "description": "A session on what's involved in a tech startup raising an initial round of funding given by Fergus O'Dea from NDRC (National Digital Research Centre), a leading investor in early-stage digital startups."
     }, {
-        "name": "OpenStack - An Introduction",
+        "name": "OpenStack - an Intro",
         "by": "Graham Hayes - Openstack Designate Project Team Leader",
-        "time": "5:00pm",
+        "time": "17:00",
         "place": {
             "id": "The Mezz",
             "map": ""
         },
-        "description": "An overview of what OpenStack is, and how you can use it. I will cover the main projects available in OpenStack; what they do, and how they link together. I will also tell how you can get involved and contribute to the OpenStack project."
+        "description": "An over of what OpenStack is, and how you can use it, I will cover the main projects available in OpenStack, what they do, and how they link together. I will also cover how you can get involved. https://graham.hayes.ie"
     }]
 }, {
     "day": "Tuesday",
-    "description": "RB & Associates",
+    "description": "Associates",
     "events": [{
         "name": "Citrix Workspace Cloud",
         "by": "Nicholas Connolly - Citrix",
-        "time": "12:00pm",
+        "time": "12:00",
         "place": {
             "id": "The Mezz",
             "map": ""
@@ -80,7 +62,7 @@
     }, {
         "name": "Prometheus: A Next Generation Monitoring System",
         "by": "Brian Brazil - Robust Perception",
-        "time": "1:00pm",
+        "time": "13:00",
         "place": {
             "id": "The Mezz",
             "map": ""
@@ -89,65 +71,47 @@
     }, {
         "name": "Lunch",
         "by": "",
-        "time": "2:00pm",
+        "time": "14:00",
         "place": {
             "id": "The Mezz",
             "map": ""
         },
         "description": "Lunch Time!"
     }, {
-        "name": "To Be Announced",
-        "by": "",
-        "time": "3:00pm",
-        "place": {
-            "id": "The Mezz",
-            "map": ""
-        },
-        "description": "Talks given by associate Redbrick members"
-    }, {
-        "name": "To Be Announced",
-        "by": "",
-        "time": "4:00pm",
-        "place": {
-            "id": "The Mezz",
-            "map": ""
-        },
-        "description": "Talks given by associate Redbrick members"
-    }, {
         "name": "Hackers in the Movies",
         "by": "Damian Gordoni - DIT Universal Design RG",
-        "time": "5:00pm",
+        "time": "17:00",
         "place": {
             "id": "The Mezz",
             "map": ""
         },
-        "description": "Damian's talk will look at the trope that is the movie computer hacker and how Hollywood portrays them. What do hackerse look like? How old are they? What's their day job and how did this 'stereotype' evolve over time? Damian will also talk about what movie hackers can do as opposed to what can be done in real life"
+        "description": "Damian's talk will look at the portrayal of computer hackers in the movies, how they are represented in terms of the age, gender, profession, etc. and how this portrayal has evolved over the decades, and it will also will look at the depiction of the types of things hackers can do in the movies as opposed to real life"
     }]
 }, {
     "day": "Wednesday",
     "description": "HEAnet",
     "events": [{
-        "name": "HEAnet",
-        "by": "",
-        "time": "12:00pm",
+        "name": "Admins, Tales of Progress - With live demo",
+        "by": "Terry Bolt & Cian Butler",
+        "time": "12:00",
         "place": {
             "id": "The Mezz",
             "map": ""
         },
-        "description": "HEAnet"
+        "description": "Progress has been made to Redbrick 2.0 but how will it work. Terry and Cian have a live demo to show you how."
     }, {
-        "name": "HEAnet",
-        "by": "",
-        "time": "1:00pm",
+        "name": "MiRo Advisory",
+        "by": "Ben A crawford",
+        "time": "13:00",
         "place": {
             "id": "The Mezz",
             "map": ""
         },
-        "description": "HEAnet"
+        "description": "WhiteHack: Smart Meter Security in 56 million homes"
     }, {
         "name": "Lunch",
         "by": "",
-        "time": "2:00pm",
+        "time": "14:00",
         "place": {
             "id": "The Mezz",
             "map": ""
@@ -156,7 +120,7 @@
     }, {
         "name": "Imprecise Network Monitoring Tools",
         "by": "Brian Nisbet - HEAnet (Network Operations Manager)",
-        "time": "3:00pm",
+        "time": "15:00",
         "place": {
             "id": "The Mezz",
             "map": ""
@@ -165,7 +129,7 @@
     }, {
         "name": "Intro To GoLang",
         "by": "Voy",
-        "time": "4:00pm",
+        "time": "16:00",
         "place": {
             "id": "The Mezz",
             "map": ""
@@ -174,7 +138,7 @@
     }, {
         "name": "Working Together: Le and Private Sector Botnet Takedowns",
         "by": "Alan Neville (anev) - Symantec, Threat Intelligence Analyst",
-        "time": "5:00pm",
+        "time": "17:00",
         "place": {
             "id": "The Mezz",
             "map": ""
@@ -187,16 +151,16 @@
     "events": [{
         "name": "The Challenges of Machine Learning at Scale",
         "by": "Graham Poulter",
-        "time": "12:00pm",
+        "time": "12:00",
         "place": {
             "id": "The Mezz",
             "map": ""
         },
-        "description": "Aoife runs a large website that shows ads alongside its search results and page contents, and wants to do better by users by responding only with the ads they are likely to click given the request they made - a task perfectly suited to machine learning. However, Aoife quickly runs into scaling problems: those models have to handle tens of thousands of requests per second for both learning and prediction, there are billions of different features in so much data, and all the while she wants models to stay up to date and run lots of them to figure out which ones make the best predictions. Let's follow Aoife as she begins with the simplest possible system and explore ways in she might design the system to overcome these scaling issues."
+        "description": "Aoife wants to predict how likely you are to click on an ad, to help Google decide whether to show it. With the machine learning mathematics all done, shouldn't it be easy: just train the model and make predictions? Not so fast. We'll see how Aoife overcomes the obstacles that stand between her machine learning model and the world. For starters: she has to train it on petabytes of data, continually arriving, and have it serve millions of predictions a second. Graham Poulter is a Site Reliability Engineer on Google's machine learning pipelines for ads, having moved here from South Africa three years ago. He's done some machine learning before, but was amazed to see that scaling up machine learning is a whole lot harder than one might imagine."
     }, {
         "name": "Designing Large Scale Distributed Systems",
         "by": "Remigiusz Modrzejewski",
-        "time": "12:40pm",
+        "time": "12:40",
         "place": {
             "id": "The Mezz",
             "map": ""
@@ -205,7 +169,7 @@
     }, {
         "name": "An evolution of Automation",
         "by": "John Looney",
-        "time": "1:20pm",
+        "time": "13:20",
         "place": {
             "id": "The Mezz",
             "map": ""
@@ -214,7 +178,7 @@
     }, {
         "name": "Lunch",
         "by": "",
-        "time": "2:00pm",
+        "time": "14:00",
         "place": {
             "id": "The Mezz",
             "map": ""
@@ -223,7 +187,7 @@
     }, {
         "name": "Expecting the Unexpected",
         "by": "Ryan Thomas",
-        "time": "3:00pm",
+        "time": "15:00",
         "place": {
             "id": "The Mezz",
             "map": ""
@@ -232,7 +196,7 @@
     }, {
         "name": "10 Practical Tips for Writing an Attention-Getting CV \n Interviewing at Google",
         "by": "Rebecca O'Farrell/Anam Acktar, Ryan Thomas and Graham Poulter",
-        "time": "3:40pm",
+        "time": "15:40",
         "place": {
             "id": "The Mezz",
             "map": ""
@@ -241,7 +205,7 @@
     }, {
         "name": "Google Intern Panel",
         "by": "Google",
-        "time": "4:20pm",
+        "time": "16:20",
         "place": {
             "id": "The Mezz",
             "map": ""
