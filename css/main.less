@@ -1,47 +1,51 @@
 @import url(//fonts.googleapis.com/css?family=Roboto:100,300,400);
 @import "variables";
 
-header {
-  text-align: center;
 
-  .title {
-    margin: 0.5em 0;
-    margin-bottom: 0.3em;
-    font-size: 15vmin;
-    font-weight: 100;
+body {
+  background-color: @color-grey;
 
-    &__colour {
-      color: @color-red;
-      font-weight: 300;
-    }
-
-    a {
-      color: @color-black;
-    }
-  }
-
-  .menu {
-    list-style-type: none;
-    margin: 8px 0;
-    padding: 0;
-    overflow: hidden;
+  .wrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 
-    &__item {
-      float: left;
-      padding: 0 8px;
+    .title {
+      margin: 0 32px;
+      text-align: center;
+
+      &__text {
+        margin: 0.5em 0;
+        margin-bottom: 0.3em;
+        font-size: 15vmin;
+        font-weight: 100;
+
+        &__colour {
+          color: @color-red;
+          font-weight: 300;
+        }
+
+        a {
+          color: @color-black;
+        }
+      }
+
+      .menu {
+        list-style-type: none;
+        margin: 8px 0;
+        padding: 0;
+        overflow: hidden;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        &__item {
+          float: left;
+          padding: 0 8px;
+        }
+      }
     }
   }
-}
-
-body {
-  background-color: @color-grey;
-}
-
-video {
-  width: 100%;
 }
 
 .day {
@@ -134,10 +138,12 @@ ul {
 
 .livestream {
   display: none;
+  width: 100%;
 }
 
 .playlist {
   display: block;
+  width: 100%;
 }
 
 .collapsible.popout>li {
@@ -153,6 +159,7 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: @card-width;
 
   &__events {
     width: 80%;
@@ -162,7 +169,7 @@ ul {
     }
 
     @media screen and (min-width: 800px) {
-      max-width: @card-width;
+      width: @card-width;
     }
   }
 }
