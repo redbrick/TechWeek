@@ -1,0 +1,15 @@
+#!/usr/bin/env node
+
+var fs = require("fs");
+var filename = process.argv[2];
+
+if (filename) {
+  try {
+    JSON.parse(fs.readFileSync(filename, "utf8"));
+    console.log("Look good");
+  } catch (err) {
+    console.error(err);
+  }
+} else {
+  console.log("Usage: check-event-json events.json");
+}
