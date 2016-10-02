@@ -42,10 +42,10 @@ var _hour = _minute * 60;
 var _day = _hour * 24;
 
 // setInterval allows you to do certain action every period of time (like cronjob)
-setInterval(function(){
+setInterval(function() {
 
   // Check is current time + 10 minutes smaller than the starting time
-  if(now+1000*60*10 < start){
+  if(now+1000*60*10 < start) {
     // If it is, show the box and start counting down
     $('.countdown').show(400);
   } else {
@@ -53,7 +53,7 @@ setInterval(function(){
     // Otherwise, show the livestream and abjust the height of it to be in
     // 19:6 aspect ratio
     // When done hiding the countdown show the livestream, make it take 400ms so there is a smooth transition
-    if(liveActive){
+    if(liveActive) {
       showLive();
     }
   }
@@ -74,10 +74,10 @@ setInterval(function(){
 }, 1000); // Set the time of the interval, in ms, so 1000 (1s)
 
 // Show the livefeed
-function showLive(){
+function showLive() {
   if(!liveShown){
-    $('.countdown').hide(400, function(){
-      $('.livestream').show(0, function(){
+    $('.countdown').hide(400, function() {
+      $('.livestream').show(0, function() {
         $('video').height(0);
         $('video').animate({height: $('video').width() * (9 / 16), display: 'block'}, 1000);
       });
@@ -87,13 +87,15 @@ function showLive(){
 }
 
 // Load the events from the file and add them to the page
-function loadEvents(days){
+function loadEvents(days) {
   var ce = $('.card-container__events');
   for(var i = 0; i < days.length; i++) {
     var day = days[i];
-    var ds = day.day+'-event';
-    var ul = day.day+'-events';
-    var de = $('<li><div id="'+day.day+'" class="collapsible-header container day"><h5 class="day__title" data-position="right"><span class="day__title__bold">' + day.day + '</span> - ' + day.description + '</h5></div><div class="collapsible-body"><ul id="'+ul+'"class="collapsible sub-collapsible" data-collepsible="accordion"></div></ul>').appendTo(ce);
+    var ul = day.day + '-events';
+    var de = $('<li><div id="' + day.day + '" class="collapsible-header container day">
+        <h5 class="day__title" data-position="right"><span class="day__title__bold">' + day.day + '</span> - ' + day.description + '</h5></div>
+        <div class="collapsible-body"><ul id="'+ul+'"class="collapsible sub-collapsible" data-collepsible="accordion"></div></ul>');
+    de.appendTo(ce);
 
     for(var j = 0; j < day.events.length; j++) {
       var event = day.events[j];
@@ -114,7 +116,7 @@ function loadEvents(days){
     }
   }
 
-  $('h5').each( function( c ){
+  $('h5').each( function( c ) {
     $(this).css({color: colors[(v+c) % 5]});
   });
 

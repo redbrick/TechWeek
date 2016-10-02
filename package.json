@@ -4,7 +4,7 @@
   "description": "This repository contains the Techweek website",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "eslint js/main,js && bin/check-event-json && gulp",
     "postinstall": "gulp"
   },
   "repository": {
@@ -24,6 +24,7 @@
     "gulp": "^3.9.1",
     "gulp-clean-css": "^2.0.12",
     "gulp-connect": "^5.0.0",
+    "gulp-json-schema": "^1.0.0",
     "gulp-less": "^3.1.0",
     "gulp-minify": "0.0.14",
     "gulp-rename": "^1.2.2"

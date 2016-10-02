@@ -1,15 +1,23 @@
 #!/usr/bin/env node
 
-var fs = require("fs");
-var filename = process.argv[2];
+var fs = require('fs');
+var file = process.argv[2];
 
-if (filename) {
+if(file !== undefined && file !== null) {
+  checkJson(file);
+} else {
+  for(const i of ['events.json', '2015/events.json', '2016/events.json']) {
+    checkJson(i);
+  }
+  process.exit(0);
+}
+
+function checkJson (filename) {
   try {
-    JSON.parse(fs.readFileSync(filename, "utf8"));
-    console.log("Look good");
+    JSON.parse(fs.readFileSync(filename, 'utf8'));
+    console.log(filename +  ' looks good');
   } catch (err) {
     console.error(err);
+    process.exit(1);
   }
-} else {
-  console.log("Usage: check-event-json events.json");
 }

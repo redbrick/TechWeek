@@ -1,4 +1,5 @@
 # TechWeek Website
+[![Build Status](https://travis-ci.org/redbrick/techweek.dcu.ie.svg?branch=master)](https://travis-ci.org/redbrick/techweek.dcu.ie)<Paste>
 This repository contains the Techweek website
 The website was written to have the Google Material Design look and feel. MaterializeCSS was used to speed up the process.  
 
