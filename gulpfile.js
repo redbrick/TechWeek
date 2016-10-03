@@ -51,7 +51,7 @@ gulp.task('html', function () {
 });
 
 gulp.task('validate', () => {
-  return gulp.src(['./events.json', './2016/*.json', '.2015/*.json'])
+  return gulp.src(['./events.json', './2016/*.json', './2015/*.json'])
     .pipe(jsonSchema('schema.json'));
 });
 

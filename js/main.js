@@ -92,9 +92,7 @@ function loadEvents(days) {
   for(var i = 0; i < days.length; i++) {
     var day = days[i];
     var ul = day.day + '-events';
-    var de = $('<li><div id="' + day.day + '" class="collapsible-header container day">
-        <h5 class="day__title" data-position="right"><span class="day__title__bold">' + day.day + '</span> - ' + day.description + '</h5></div>
-        <div class="collapsible-body"><ul id="'+ul+'"class="collapsible sub-collapsible" data-collepsible="accordion"></div></ul>');
+    var de = $('<li><div id="' + day.day + '" class="collapsible-header container day"> <h5 class="day__title" data-position="right"><span class="day__title__bold">' + day.day + '</span> - ' + day.description + '</h5></div> <div class="collapsible-body"><ul id="'+ul+'"class="collapsible sub-collapsible" data-collepsible="accordion"></div></ul>');
     de.appendTo(ce);
 
     for(var j = 0; j < day.events.length; j++) {
