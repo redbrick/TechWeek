@@ -3,7 +3,7 @@
   "description": "Amazon",
   "events": [{
     "name": "Opening Event",
-    "by": "",
+    "by": "Redbrick",
     "time": "10am",
     "place": {
       "id": "L101",
@@ -15,53 +15,53 @@
     "by": "Amazon",
     "time": "12pm",
     "place": {
-      "id": "",
-      "map": ""
+      "id": "The Mezz",
+      "map": "Somewhere in DCU"
     },
     "description": "Amazon CloudWatch"
   }, {
     "name": "Internet of Things",
-    "by": "",
+    "by": "Amazon",
     "time": "1pm",
     "place": {
-      "id": "",
-      "map": ""
+      "id": "The Mezz",
+      "map": "Somewhere in DCU"
     },
     "description": "Internet of Things"
   }, {
     "name": "Lunch",
-    "by": "",
+    "by": "Food",
     "time": "2pm",
     "place": {
-      "id": "",
-      "map": ""
+      "id": "The Mezz",
+      "map": "Somewhere in DCU"
     },
     "description": "Time for a break"
   }, {
     "name": "Project Workshops with Amazon SDEs",
-    "by": "",
+    "by": "Amazon",
     "time": "3pm",
     "place": {
-      "id": "",
-      "map": ""
+      "id": "The Mezz",
+      "map": "Somewhere in DCU"
     },
     "description": "Amazon"
   }, {
     "name": "Colin Whittaker",
-    "by": "",
+    "by": "Colin Whittaker",
     "time": "4pm",
     "place": {
-      "id": "",
-      "map": ""
+      "id": "The Mezz",
+      "map": "Somewhere in DCU"
     },
     "description": "Colin Whittaker"
   }, {
     "name": "Networking",
-    "by": "",
+    "by": "nuBar",
     "time": "3pm",
     "place": {
-      "id": "",
-      "map": ""
+      "id": "The Mezz",
+      "map": "Somewhere in DCU"
     },
     "description": "Networking"
   }]
@@ -70,20 +70,20 @@
   "description": "RB & Intercom",
   "events": [{
     "name": "Associate Talks",
-    "by": "",
+    "by": "Redbrick",
     "time": "10am",
     "place": {
-      "id": "",
-      "map": ""
+      "id": "The Mezz",
+      "map": "Somewhere in DCU"
     },
     "description": "Talks given by old RedBrick members"
   }, {
     "name": "Intercom",
-    "by": "",
+    "by": "Intercom",
     "time": "12pm",
     "place": {
-      "id": "",
-      "map": ""
+      "id": "The Mezz",
+      "map": "Somewhere in DCU"
     },
     "description": "Intercom talks"
   }]
@@ -92,47 +92,47 @@
   "description": "Openet",
   "events": [{
     "name": "Admin Tales of Fail",
-    "by": "",
+    "by": "koffee, zergless, kylar",
     "time": "2:30pm",
     "place": {
-      "id": "",
-      "map": ""
+      "id": "The Mezz",
+      "map": "Somewhere in DCU"
     },
     "description": "How Redbrick was broken, but then fixed by our amazing admins"
   }, {
     "name": "Openet",
-    "by": "",
+    "by": "Opennet",
     "time": "3:30pm",
     "place": {
-      "id": "",
-      "map": ""
+      "id": "The Mezz",
+      "map": "Somewhere in DCU"
     },
     "description": "Openet"
   }, {
     "name": "Coding Competition",
-    "by": "",
+    "by": "Opennet",
     "time": "4pm",
     "place": {
-      "id": "",
-      "map": ""
+      "id": "The Mezz",
+      "map": "Somewhere in DCU"
     },
     "description": "Prove your skills"
   }, {
     "name": "nuBar",
-    "by": "",
+    "by": "nuBar",
     "time": "12pm",
     "place": {
-      "id": "",
-      "map": ""
+      "id": "The Mezz",
+      "map": "Somewhere in DCU"
     },
     "description": "Lets go!"
   }, {
     "name": "Prizegiving",
-    "by": "",
+    "by": "opennet",
     "time": "12pm",
     "place": {
-      "id": "",
-      "map": ""
+      "id": "The Mezz",
+      "map": "Somewhere in DCU"
     },
     "description": "Rewards for the competition"
   }]
@@ -141,56 +141,56 @@
   "description": "Google",
   "events": [{
     "name": "Linear Algebra",
-    "by": "",
+    "by": "Google",
     "time": "1pm",
     "place": {
-      "id": "",
-      "map": ""
+      "id": "The Mezz",
+      "map": "Somewhere in DCU"
     },
     "description": "What?"
   }, {
     "name": "Lunch",
-    "by": "",
+    "by": "Food",
     "time": "2:30pm",
     "place": {
-      "id": "",
-      "map": ""
+      "id": "The Mezz",
+      "map": "Somewhere in DCU"
     },
     "description": "Eat"
   }, {
     "name": "Internet of Things",
-    "by": "",
+    "by": "Google",
     "time": "2:30pm",
     "place": {
-      "id": "",
-      "map": ""
+      "id": "The Mezz",
+      "map": "Somewhere in DCU"
     },
     "description": "Again"
   }, {
     "name": "Building Reliable Large-Scale Distributed Systems",
-    "by": "",
+    "by": "Google",
     "time": "12pm",
     "place": {
-      "id": "",
-      "map": ""
+      "id": "The Mezz",
+      "map": "Somewhere in DCU"
     },
     "description": "How-to"
   }, {
     "name": "Expecting the Unexpected",
-    "by": "",
+    "by": "Google",
     "time": "12pm",
     "place": {
-      "id": "",
-      "map": ""
+      "id": "The Mezz",
+      "map": "Somewhere in DCU"
     },
     "description": "Google DIRT training"
   }, {
     "name": "Close Networking Session",
-    "by": "",
+    "by": "Google",
     "time": "17pm",
     "place": {
-      "id": "",
-      "map": ""
+      "id": "The Mezz",
+      "map": "Somewhere in DCU"
     },
     "description": "End of Networking"
   }]
@@ -199,56 +199,56 @@
   "description": "AOL",
   "events": [{
     "name": "Associate Talks",
-    "by": "",
+    "by": "Redbrick",
     "time": "1pm",
     "place": {
-      "id": "",
-      "map": ""
+      "id": "The Mezz",
+      "map": "Somewhere in DCU"
     },
     "description": "Old members"
   }, {
     "name": "The Architecture of Online Ad Delivery",
-    "by": "",
+    "by": "AOL",
     "time": "2:30pm",
     "place": {
-      "id": "",
-      "map": ""
+      "id": "The Mezz",
+      "map": "Somewhere in DCU"
     },
     "description": "Ads"
   }, {
     "name": "Introduction to Erlang in the context of a Real Time Advertising Auction",
-    "by": "",
+    "by": "AOL",
     "time": "2:30pm",
     "place": {
       "id": "QG22",
-      "map": ""
+      "map": "Somewhere in DCU"
     },
     "description": "Real time"
   }, {
     "name": "Overview of Aol’s open source SimpleReact library for Java 8",
-    "by": "",
+    "by": "AOL",
     "time": "12pm",
     "place": {
-      "id": "",
-      "map": ""
+      "id": "The Mezz",
+      "map": "Somewhere in DCU"
     },
     "description": "Erlang"
   }, {
     "name": "Clean Code - Join the Revolution!",
-    "by": "",
+    "by": "AOL",
     "time": "12pm",
     "place": {
-      "id": "",
-      "map": ""
+      "id": "The Mezz",
+      "map": "Somewhere in DCU"
     },
     "description": "Clean Code"
   }, {
     "name": "Continuous Integration/Continuous Deployment (CI/CD)",
-    "by": "",
+    "by": "AOL",
     "time": "17pm",
     "place": {
-      "id": "",
-      "map": ""
+      "id": "The Mezz",
+      "map": "Somewhere in DCU"
     },
     "description": "CI|CD"
   }]

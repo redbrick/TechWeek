@@ -4,8 +4,9 @@ var cleanCSS = require('gulp-clean-css');
 var minify = require('gulp-minify');
 var rename = require('gulp-rename');
 var connect = require('gulp-connect');
+var jsonSchema = require('gulp-json-schema');
 
-gulp.task('dev', ['compress', 'minify-css', 'less', 'webserver'], function () {
+gulp.task('dev', ['compress', 'minify-css', 'less', 'webserver', 'validate'], function () {
     gulp.watch(['./css/*.less', './js/*.js', './**/*.html'], ['less', 'compress', 'html']);
 });
 
@@ -49,4 +50,9 @@ gulp.task('html', function () {
     .pipe(connect.reload());
 });
 
-gulp.task('default', ['compress', 'minify-css', 'less']);
+gulp.task('validate', () => {
+  return gulp.src(['./events.json', './2016/*.json', './2015/*.json'])
+    .pipe(jsonSchema('schema.json'));
+});
+
+gulp.task('default', ['compress', 'minify-css', 'less', 'validate']);
