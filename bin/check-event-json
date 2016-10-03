@@ -2,14 +2,21 @@
 
 var fs = require('fs');
 var file = process.argv[2];
+var glob = require("glob")
 
 if(file !== undefined && file !== null) {
   checkJson(file);
 } else {
-  for(const i of ['events.json', '2015/events.json', '2016/events.json']) {
-    checkJson(i);
-  }
-  process.exit(0);
+  glob('**/*.json', {'ignore': 'node_modules'}, function (er, files) {
+    if(er) {
+      console.error(er);
+      process.exit(1);
+    }
+    for(const i of files) {
+      checkJson(i);
+    }
+    process.exit(0);
+  });
 }
 
 function checkJson (filename) {
@@ -17,7 +24,7 @@ function checkJson (filename) {
     JSON.parse(fs.readFileSync(filename, 'utf8'));
     console.log(filename +  ' looks good');
   } catch (err) {
-    console.error(err);
+    console.error(filename, err);
     process.exit(1);
   }
 }
