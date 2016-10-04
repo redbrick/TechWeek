@@ -17,13 +17,16 @@
     "url": "https://github.com/redbrick/techweek.dcu.ie/issues"
   },
   "homepage": "https://github.com/redbrick/techweek.dcu.ie#readme",
-  "dependencies": {},
+  "dependencies": {
+    "materialize-css": "^0.97.7"
+  },
   "devDependencies": {
     "eslint": "^3.6.1",
     "eslint-plugin-json": "^1.2.0",
     "glob": "^7.1.0",
     "gulp": "^3.9.1",
     "gulp-clean-css": "^2.0.12",
+    "gulp-concat": "^2.6.0",
     "gulp-connect": "^5.0.0",
     "gulp-json-schema": "^1.0.0",
     "gulp-minify": "0.0.14",
