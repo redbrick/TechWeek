@@ -1,13 +1,13 @@
 var gulp = require('gulp');
-var less = require('gulp-less');
+var sass = require('gulp-sass');
 var cleanCSS = require('gulp-clean-css');
 var minify = require('gulp-minify');
 var rename = require('gulp-rename');
 var connect = require('gulp-connect');
 var jsonSchema = require('gulp-json-schema');
 
-gulp.task('dev', ['compress', 'minify-css', 'less', 'webserver', 'validate'], function () {
-    gulp.watch(['./css/*.less', './js/*.js', './**/*.html'], ['less', 'compress', 'html']);
+gulp.task('dev', ['compress', 'minify-css', 'scss', 'webserver', 'validate'], function () {
+    gulp.watch(['./css/*.scss', './js/*.js', './**/*.html'], ['scss', 'compress', 'html']);
 });
 
 gulp.task('compress', function() {
@@ -29,9 +29,9 @@ gulp.task('minify-css', function() {
     .pipe(gulp.dest('dist/css'));
 });
 
-gulp.task('less', function() {
-  return gulp.src('css/*.less')
-    .pipe(less())
+gulp.task('scss', function() {
+  return gulp.src('css/main.scss')
+    .pipe(sass())
     .pipe(cleanCSS({compatibility: 'ie8', processImport: false}))
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('dist/css'));
@@ -55,4 +55,4 @@ gulp.task('validate', () => {
     .pipe(jsonSchema('schema.json'));
 });
 
-gulp.task('default', ['compress', 'minify-css', 'less', 'validate']);
+gulp.task('default', ['compress', 'minify-css', 'scss', 'validate']);
