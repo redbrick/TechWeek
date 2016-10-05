@@ -99,7 +99,18 @@
       "map": "Somewhere in DCU"
     },
     "description": "TBA"
-  }]
+  },{
+   "name":"Practical concerns when building (μ)Services",
+   "by": "CircleCI",
+   "time":"17:30",
+   "place": {
+     "id": "The Mezz",
+     "map": "Somewhere in DCU"
+   },
+   "description": "Conor McDermottroe talks about what you should really worry about when building and deploying Services."
+  }
+
+}]
 }, {
   "day": "Thursday",
   "description": "STEM",
