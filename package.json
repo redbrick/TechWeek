@@ -32,5 +32,33 @@
     "gulp-minify": "0.0.14",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.3.2"
+  },
+  "eslintConfig": {
+    "plugins": [
+      "json"
+    ],
+    "env": {
+      "browser": true,
+      "jquery": true
+    },
+    "extends": "eslint:recommended",
+    "rules": {
+      "indent": [
+        "error",
+        2
+      ],
+      "linebreak-style": [
+        "error",
+        "unix"
+      ],
+      "quotes": [
+        "error",
+        "single"
+      ],
+      "semi": [
+        "error",
+        "always"
+      ]
+    }
   }
 }
