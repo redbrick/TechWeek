@@ -1,11 +1,22 @@
 // We wait for the document to finish loading
 $(document).ready( function(){
+  var currHash = getHash();
   // Get the event list from JSON (because JSON is nice) and send data to loadEvents function.
   // This call is anynchronous, meaning it will display the data once the JSON is loaded,
   // but the code continues to execute in the background
   $.getJSON('./events.json', function(data){ loadEvents(data); });
   // Change the color of the header based on the amount of times you visited the page
   $('header h1 span').css({color: colors[(v+3) % 5]});
+
+  if (typeof(curr) !== 'boolean') {
+    $('li[data-hash="' + currHash + '"] > div').trigger('click');
+  }
+
+  $('.card-container__events > li').on('click', function () {
+    var hash = $(this).attr('data-hash');
+
+    setHash(hash);
+  });
 });
 
 // This is a conditional (Ternary) Operator. It assigns a value based on some other value
@@ -92,7 +103,7 @@ function loadEvents(days) {
   for(var i = 0; i < days.length; i++) {
     var day = days[i];
     var ul = day.day + '-events';
-    var de = $('<li><div id="' + day.day + '" class="collapsible-header container day"> <h5 class="day__title" data-position="right"><span class="day__title__bold">' + day.day + '</span> - ' + day.description + '</h5></div> <div class="collapsible-body"><ul id="'+ul+'"class="collapsible sub-collapsible" data-collepsible="accordion"></div></ul>');
+    var de = $('<li data-hash="' + day.day + '"><div id="' + day.day + '" class="collapsible-header container day"> <h5 class="day__title" data-position="right"><span class="day__title__bold">' + day.day + '</span> - ' + day.description + '</h5></div> <div class="collapsible-body"><ul id="'+ul+'"class="collapsible sub-collapsible" data-collepsible="accordion"></div></ul>');
     de.appendTo(ce);
 
     for(var j = 0; j < day.events.length; j++) {
@@ -120,4 +131,14 @@ function loadEvents(days) {
 
   $('.collapsible').collapsible();
   $('.tooltipped').tooltip({delay: 10});
+}
+
+function getHash() {
+  var currHash = window.location.hash;
+
+  return (currHash !== '') ? currHash : false;
+}
+
+function setHash(hash) {
+  window.location.hash = hash;
 }
