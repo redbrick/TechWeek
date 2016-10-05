@@ -9,37 +9,39 @@ body {
         flex-wrap: wrap;
         justify-content: center;
 
-        .title {
-            margin: $title-margin;
-            text-align: center;
+        .sub-wrap {
+            .title {
+                margin: $title-margin;
+                text-align: center;
 
-            &__text {
-                margin: $text-margin;
-                font-size: $title-font-size;
-                font-weight: $title-font-weight;
+                &__text {
+                    margin: $text-margin;
+                    font-size: $title-font-size;
+                    font-weight: $title-font-weight;
 
-                &__colour {
-                    color: $color-red;
-                    font-weight: $title-colored-font-weight;
+                    &__colour {
+                        color: $color-red;
+                        font-weight: $title-colored-font-weight;
+                    }
+
+                    a {
+                        color: $color-black;
+                    }
                 }
 
-                a {
-                    color: $color-black;
-                }
-            }
+                .menu {
+                    list-style-type: none;
+                    margin: $menu-margin;
+                    padding: 0;
+                    overflow: hidden;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
 
-            .menu {
-                list-style-type: none;
-                margin: $menu-margin;
-                padding: 0;
-                overflow: hidden;
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-
-                &__item {
-                    float: left;
-                    padding: 0 8px;
+                    &__item {
+                        float: left;
+                        padding: 0 8px;
+                    }
                 }
             }
         }
