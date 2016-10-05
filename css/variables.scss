@@ -5,6 +5,25 @@ $large-phone: 560px;
 // Colour variables
 $color-red: red;
 $color-black: black;
-$color-grey: #eee;
+$color-primary: #eee;
 $color-lightish-grey: #ddd;
 $color-white: white;
+
+
+$title-font-size: 15vmin;
+$title-font-weight: 100;
+$title-colored-font-weight: 300;
+$day-title-font-weight: 300;
+$day-title-font-weight-bold: 500;
+$event-time-font-size: 1.5vh;
+$p-font-weight: 300;
+$countdown-font-size: 2em;
+
+$title-margin: 0 32px;
+$text-margin: .5em 0 .3em;
+$menu-margin: 8px 0;
+$event-time-margin: 0 1em 0 0;
+$ul-margin: 0 0 2vh 0;
+$popout-element-margin: 0 16px;
+$popout-element-margin-active: 0 8px;
+$collapsible-body-border: 1px solid $color-lightish-grey;
