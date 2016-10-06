@@ -1,45 +1,47 @@
-@import url(//fonts.googleapis.com/css?family=Roboto:100,300,400);
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,300,400);
 @import 'variables';
 @import '../node_modules/materialize-css/sass/materialize.scss';
 
 body {
-    background-color: $color-grey;
+    background-color: $color-primary;
     .wrapper {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
 
-        .title {
-            margin: 0 32px;
-            text-align: center;
+        .sub-wrap {
+            .title {
+                margin: $title-margin;
+                text-align: center;
 
-            &__text {
-                margin: .5em 0 .3em;
-                font-size: 15vmin;
-                font-weight: 100;
+                &__text {
+                    margin: $text-margin;
+                    font-size: $title-font-size;
+                    font-weight: $title-font-weight;
 
-                &__colour {
-                    color: $color-red;
-                    font-weight: 300;
+                    &__colour {
+                        color: $color-red;
+                        font-weight: $title-colored-font-weight;
+                    }
+
+                    a {
+                        color: $color-black;
+                    }
                 }
 
-                a {
-                    color: $color-black;
-                }
-            }
+                .menu {
+                    list-style-type: none;
+                    margin: $menu-margin;
+                    padding: 0;
+                    overflow: hidden;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
 
-            .menu {
-                list-style-type: none;
-                margin: 8px 0;
-                padding: 0;
-                overflow: hidden;
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-
-                &__item {
-                    float: left;
-                    padding: 0 8px;
+                    &__item {
+                        float: left;
+                        padding: 0 8px;
+                    }
                 }
             }
         }
@@ -52,10 +54,10 @@ body {
     &__title {
         width: auto;
         display: inline;
-        font-weight: 300;
+        font-weight: $day-title-font-weight;
 
         &__bold {
-            font-weight: 500;
+            font-weight: $day-title-font-weight-bold;
         }
     }
 }
@@ -66,9 +68,9 @@ body {
     &__time {
         float: left;
         display: inline-block;
-        font-size: 1.5vh;
+        font-size:$event-time-font-size;
         width: 15%;
-        margin-right: 1em;
+        margin: $event-time-margin;
         max-width: 5em;
     }
 
@@ -85,11 +87,11 @@ body {
 }
 
 p {
-    font-weight: 300;
+    font-weight: $p-font-weight;
 }
 
 ul {
-    margin-bottom: 2vh;
+    margin: $ul-margin;
 }
 
 .collapsible-header {
@@ -110,7 +112,7 @@ ul {
     }
 
     .collapsible-body, .collapsible-header {
-        border-top: 1px solid $color-lightish-grey;
+        border-top: $collapsible-body-border;
     }
 }
 
@@ -126,7 +128,7 @@ ul {
 
         span {
             display: block;
-            font-size: 2em;
+            font-size: $countdown-font-size;
         }
     }
 }
@@ -143,10 +145,10 @@ ul {
 
 .collapsible.popout > li {
     background-color: $color-white;
-    margin: 0 16px;
+    margin: $popout-element-margin;
 
     &.active {
-        margin: 0 8px;
+        margin: $popout-element-margin-active;
     }
 }
 

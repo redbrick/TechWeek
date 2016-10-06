@@ -7,7 +7,7 @@ var rename = require('gulp-rename');
 var connect = require('gulp-connect');
 var jsonSchema = require('gulp-json-schema');
 
-gulp.task('dev', ['compress', 'scss', 'webserver', 'validate'], function () {
+gulp.task('dev', ['compress', 'scss', 'fonts', 'webserver', 'validate'], function () {
     gulp.watch(['./css/*.scss', './js/*.js', './**/*.html'], ['scss', 'compress', 'html']);
 });
 
@@ -41,6 +41,12 @@ gulp.task('webserver', function() {
   });
 });
 
+
+gulp.task('fonts', function() {
+   return gulp.src('./node_modules/materialize-css/fonts/**')
+       .pipe(gulp.dest('dist/fonts'))
+});
+
 gulp.task('html', function() {
   gulp.src('./**/*.html')
     .pipe(connect.reload());
@@ -51,4 +57,4 @@ gulp.task('validate', () => {
     .pipe(jsonSchema('schema.json'));
 });
 
-gulp.task('default', ['compress', 'scss', 'validate']);
+gulp.task('default', ['compress', 'scss', 'fonts', 'validate']);
