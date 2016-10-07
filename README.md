@@ -2,6 +2,17 @@
 This repository contains the Techweek website
 The website was written to have the Google Material Design look and feel. MaterializeCSS was used to speed up the process.  
 
+## Deployment
+
+To deploy to a server just run from the parent of of the folder you want to deploy too.
+_ example writen assuming folder deployed is techweek_
+```
+git clone https://github.com/redbrick/techweek.dcu.ie.git techweek
+cd techweek
+npm install
+gulp
+```
+
 ## How it works
 
 The events.json contains a JSON object containing all events (duh). The schema was just made up on the spot and seemed most appropiate. `js/main.js` is it main JavaScript file that is responsible for loading the content.
