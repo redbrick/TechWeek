@@ -1,6 +1,9 @@
 language: node_js
 node_js:
-  - "node"
-  - "6"
-  - "5"
-  - "4"
+- node
+- '6'
+- '5'
+- '4'
+notifications:
+  slack:
+    secure: PBwLn4owVvkcWP80j11pRc+pC4l6qK0QlhBTeMkeB+69WfGrBXeWJrMihq0Z0swnahmNnoBEYgYStaUCL3BIJem2Fsg+A3TVeoHSE8VEpNJH6v2pCG4R6NF4lDFxpukMW1ydO7gdm6fizzz4PSvIA1p8OAoVZVI4cMU3mfO9RQg=
