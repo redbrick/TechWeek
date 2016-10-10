@@ -1,6 +1,6 @@
 // We wait for the document to finish loading
 $(document).ready( function(){
-  var currHash = getHash();
+  const currHash = getHash();
   // Get the event list from JSON (because JSON is nice) and send data to loadEvents function.
   // This call is anynchronous, meaning it will display the data once the JSON is loaded,
   // but the code continues to execute in the background
@@ -13,7 +13,7 @@ $(document).ready( function(){
     }
 
     $('.card-container__events > li').on('click', function () {
-      var hash = $(this).attr('data-hash');
+      const hash = $(this).attr('data-hash');
       setHash(hash);
     });
   });
@@ -35,22 +35,22 @@ localStorage['visited'] = localStorage['visited'] ? +localStorage['visited']+1 :
 
 // Assign 'visited' to variable v, because its shorter to write, and will not require
 // I/O every time you use it, the above was aleady consuming...
-var v = +localStorage['visited'];
+const v = +localStorage['visited'];
 
 // Define an array of colours, based on Material Design Color recommendations
-var colors = ['#f44336', '#009688', '#4caf50', '#ffc107', '#e91e63'];
+const colors = ['#f44336', '#009688', '#4caf50', '#ffc107', '#e91e63'];
 
 // Get the current time and the time TechWeek starts at;
-var now = (new Date()).getTime();
-var start = (new Date('2016-10-24T12:00:00'));
-var liveActive = false;
-var liveShown = false;
+let now = (new Date()).getTime();
+const start = (new Date('2016-10-24T12:00:00'));
+let liveActive = false;
+let liveShown = false;
 
 // Set the constants for the amount of time in each time period
-var _second = 1000;
-var _minute = _second * 60;
-var _hour = _minute * 60;
-var _day = _hour * 24;
+const _second = 1000;
+const _minute = _second * 60;
+const _hour = _minute * 60;
+const _day = _hour * 24;
 
 // setInterval allows you to do certain action every period of time (like cronjob)
 setInterval(function() {
@@ -70,13 +70,13 @@ setInterval(function() {
   }
   now += 1000;
 
-  var dist = start - now;
-  var days = Math.floor(dist / _day);
-  var hours = Math.floor( (dist % _day) / _hour );
-  var mins = Math.floor( (dist % _hour) / _minute );
-  var secs = Math.floor( (dist % _minute) / _second );
+  const dist = start - now;
+  const days = Math.floor(dist / _day);
+  const hours = Math.floor( (dist % _day) / _hour );
+  const mins = Math.floor( (dist % _hour) / _minute );
+  const secs = Math.floor( (dist % _minute) / _second );
 
-  var str  = 	(days > 0) 		? '<span>' + days + ' Days</span>' 		: '';
+  let str  = 	(days > 0) 		? '<span>' + days + ' Days</span>' 		: '';
   str +=		(hours > 0) 	? '<span>' + hours + ' Hours</span>'	: '';
   str +=		(mins > 0) 		? '<span>' + mins + ' Minutes</span>'	: '';
   str +=		'<span>' + secs + ' Seconds</span>';
@@ -99,16 +99,16 @@ function showLive() {
 
 // Load the events from the file and add them to the page
 function loadEvents(days) {
-  var ce = $('.card-container__events');
-  for(var i = 0; i < days.length; i++) {
-    var day = days[i];
-    var ul = day.day + '-events';
-    var de = $('<li data-hash="#' + day.day + '"><div id="#' + day.day + '" class="collapsible-header container day"> <h5 class="day__title" data-position="right"><span class="day__title__bold">' + day.day + '</span> - ' + day.description + '</h5></div> <div class="collapsible-body"><ul id="'+ul+'"class="collapsible sub-collapsible" data-collepsible="accordion"></div></ul>');
+  const ce = $('.card-container__events');
+  for(let i = 0; i < days.length; i++) {
+    const day = days[i];
+    const ul = day.day + '-events';
+    const de = $('<li data-hash="#' + day.day + '"><div id="#' + day.day + '" class="collapsible-header container day"> <h5 class="day__title" data-position="right"><span class="day__title__bold">' + day.day + '</span> - ' + day.description + '</h5></div> <div class="collapsible-body"><ul id="'+ul+'"class="collapsible sub-collapsible" data-collepsible="accordion"></div></ul>');
     de.appendTo(ce);
 
-    for(var j = 0; j < day.events.length; j++) {
-      var event = day.events[j];
-      var by = (event.by.length === 0) ? '' : 'By: <i>' + event.by + '</i>';
+    for(let j = 0; j < day.events.length; j++) {
+      const event = day.events[j];
+      const by = (event.by.length === 0) ? '' : 'By: <i>' + event.by + '</i>';
       $('#'+ul).append(
         '<li>'+
           '<div class=\'collapsible-header event-card\'>' +
@@ -134,7 +134,7 @@ function loadEvents(days) {
 }
 
 function getHash() {
-  var currHash = window.location.hash;
+  const currHash = window.location.hash;
 
   return (currHash !== '') ? currHash : false;
 }

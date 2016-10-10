@@ -39,6 +39,7 @@
     ],
     "env": {
       "browser": true,
+      "es6": true,
       "jquery": true
     },
     "extends": "eslint:recommended",
@@ -58,7 +59,14 @@
       "semi": [
         "error",
         "always"
-      ]
+      ],
+      "no-var": [
+        "error"
+      ],
+      "prefer-const": ["error", {
+        "destructuring": "any",
+        "ignoreReadBeforeAssign": false
+      }]
     }
   }
 }
