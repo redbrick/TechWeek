@@ -6,6 +6,7 @@ var minify = require('gulp-minify');
 var rename = require('gulp-rename');
 var connect = require('gulp-connect');
 var jsonSchema = require('gulp-json-schema');
+var babel = require('gulp-babel');
 
 gulp.task('dev', ['compress', 'scss', 'fonts', 'webserver', 'validate'], function () {
     gulp.watch(['./css/*.scss', './js/*.js', './**/*.html'], ['scss', 'compress', 'html']);
@@ -14,6 +15,7 @@ gulp.task('dev', ['compress', 'scss', 'fonts', 'webserver', 'validate'], functio
 gulp.task('compress', function() {
   gulp.src(['js/*.js', 'node_modules/materialize-css/dist/js/materialize.js'])
     .pipe(concat('main.js'))
+    .pipe(babel())
     .pipe(minify({
         ext:{
             min:'.min.js'
