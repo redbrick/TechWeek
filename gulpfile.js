@@ -44,7 +44,7 @@ gulp.task('webserver', function() {
 
 gulp.task('fonts', function() {
    return gulp.src('./node_modules/materialize-css/fonts/**')
-       .pipe(gulp.dest('dist/fonts'))
+       .pipe(gulp.dest('dist/fonts'));
 });
 
 gulp.task('html', function() {
@@ -52,7 +52,7 @@ gulp.task('html', function() {
     .pipe(connect.reload());
 });
 
-gulp.task('validate', () => {
+gulp.task('validate', function() {
   return gulp.src(['./events.json', './2016/*.json', './2015/*.json'])
     .pipe(jsonSchema('schema.json'));
 });
