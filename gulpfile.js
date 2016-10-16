@@ -13,7 +13,7 @@ gulp.task('dev', ['compress', 'scss', 'fonts', 'webserver', 'validate'], functio
 });
 
 gulp.task('compress', function() {
-  gulp.src(['js/*.js', 'node_modules/materialize-css/dist/js/materialize.js'])
+  gulp.src(['./node_modules/jquery/dist/jquery.js', './js/*.js', './node_modules/materialize-css/dist/js/materialize.js'])
     .pipe(concat('main.js'))
     .pipe(babel())
     .pipe(minify({

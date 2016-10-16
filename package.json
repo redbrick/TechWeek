@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/redbrick/techweek.dcu.ie#readme",
   "dependencies": {
+    "jquery": "^2.2.4",
     "materialize-css": "^0.97.7"
   },
   "devDependencies": {
@@ -75,7 +76,14 @@
     }
   },
   "babel": {
-    "presets": ["es2015"],
-    "compact" : true
+    "presets": [
+      [
+        "es2015",
+        {
+            "modules": false
+        }
+      ]
+    ],
+    "compact": true
   }
 }
