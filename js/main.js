@@ -1,21 +1,20 @@
 // We wait for the document to finish loading
-$(document).ready( function(){
+$(document).ready( function() {
   const currHash = getHash();
-  // Get the event list from JSON (because JSON is nice) and send data to loadEvents function.
-  // This call is anynchronous, meaning it will display the data once the JSON is loaded,
-  // but the code continues to execute in the background
-  $.getJSON('./events.json', function(data){ loadEvents(data); }).then( function () {
-    // Change the color of the header based on the amount of times you visited the page
-    $('header h1 span').css({color: colors[(v+3) % 5]});
+  $('h5').each( function( c ) {
+    $(this).css({color: colors[(v+c) % 5]});
+  });
+  $('.collapsible').collapsible();
+  // Change the color of the header based on the amount of times you visited the page
+  $('header h1 span').css({color: colors[(v+3) % 5]});
 
-    if (typeof(currHash) !== 'boolean') {
-      $('li[data-hash="' + currHash + '"] > div').trigger('click');
-    }
+  if (typeof(currHash) !== 'boolean') {
+    $('li[data-hash="' + currHash + '"] > div').trigger('click');
+  }
 
-    $('.card-container__events > li').on('click', function () {
-      const hash = $(this).attr('data-hash');
-      setHash(hash);
-    });
+  $('.card-container__events > li').on('click', function () {
+    const hash = $(this).attr('data-hash');
+    setHash(hash);
   });
 });
 
@@ -42,7 +41,6 @@ const colors = ['#f44336', '#009688', '#4caf50', '#ffc107', '#e91e63'];
 
 // Get the current time and the time TechWeek starts at;
 let now = (new Date()).getTime();
-const start = (new Date('2016-10-24T12:00:00'));
 let liveActive = false;
 let liveShown = false;
 
@@ -97,45 +95,8 @@ function showLive() {
   }
 }
 
-// Load the events from the file and add them to the page
-function loadEvents(days) {
-  const ce = $('.card-container__events');
-  for(let i = 0; i < days.length; i++) {
-    const day = days[i];
-    const ul = day.day + '-events';
-    const de = $('<li data-hash="#' + day.day + '"><div id="#' + day.day + '" class="collapsible-header container day"> <h5 class="day__title" data-position="right"><span class="day__title__bold">' + day.day + '</span> - ' + day.description + '</h5></div> <div class="collapsible-body"><ul id="'+ul+'"class="collapsible sub-collapsible" data-collepsible="accordion"></div></ul>');
-    de.appendTo(ce);
-
-    for(let j = 0; j < day.events.length; j++) {
-      const event = day.events[j];
-      const by = (event.by.length === 0) ? '' : 'By: <i>' + event.by + '</i>';
-      $('#'+ul).append(
-        '<li>'+
-          '<div class=\'collapsible-header event-card\'>' +
-            '<div class=\'event-card__time\'>'+ event.time + '</div>' +
-            '<div class=\'event-card__event\'>' + event.name + '</div>' +
-            '<div class=\'event-card__place\'>' + event.place.id + '</div>' +
-          '</div>' +
-          '<div class=\'collapsible-body\'>' +
-            '<p>' + by +'</by>'+
-            '<p>' + event.description + '</p>' +
-          '</div>' +
-        '</li>'
-      );
-    }
-  }
-
-  $('h5').each( function( c ) {
-    $(this).css({color: colors[(v+c) % 5]});
-  });
-
-  $('.collapsible').collapsible();
-  $('.tooltipped').tooltip({delay: 10});
-}
-
 function getHash() {
   const currHash = window.location.hash;
-
   return (currHash !== '') ? currHash : false;
 }
 

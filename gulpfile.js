@@ -1,15 +1,16 @@
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var concat = require('gulp-concat');
-var cleanCSS = require('gulp-clean-css');
-var minify = require('gulp-minify');
-var rename = require('gulp-rename');
-var connect = require('gulp-connect');
-var jsonSchema = require('gulp-json-schema');
-var babel = require('gulp-babel');
+const gulp = require('gulp');
+const sass = require('gulp-sass');
+const concat = require('gulp-concat');
+const cleanCSS = require('gulp-clean-css');
+const minify = require('gulp-minify');
+const rename = require('gulp-rename');
+const connect = require('gulp-connect');
+const jsonSchema = require('gulp-json-schema');
+const babel = require('gulp-babel');
+const shell = require('gulp-shell')
 
-gulp.task('dev', ['compress', 'scss', 'fonts', 'webserver', 'validate'], function () {
-    gulp.watch(['./css/*.scss', './js/*.js', './**/*.html'], ['scss', 'compress', 'html']);
+gulp.task('dev', ['webserver'], function () {
+    gulp.watch(['./css/*.scss', './js/*.js', './**/*.handlebars', './**/*.json'], ['scss', 'compress', 'generate', 'html']);
 });
 
 gulp.task('compress', function() {
@@ -17,12 +18,12 @@ gulp.task('compress', function() {
     .pipe(concat('main.js'))
     .pipe(babel())
     .pipe(minify({
-        ext:{
-            min:'.min.js'
-        },
-        exclude: ['tasks'],
-        noSource: true,
-        ignoreFiles: ['.combo.js', '*.min.js']
+      ext:{
+          min:'.min.js'
+      },
+      exclude: ['tasks'],
+      noSource: true,
+      ignoreFiles: ['.combo.js', '*.min.js']
     }))
     .pipe(gulp.dest('dist/js'));
 });
@@ -35,9 +36,10 @@ gulp.task('scss', function() {
     .pipe(gulp.dest('dist/css'));
 });
 
-gulp.task('webserver', function() {
+gulp.task('webserver',['default'], function() {
   connect.server({
     port: 8000,
+    root: 'dist',
     host: 'techweek.dev',
     livereload: true
   });
@@ -45,8 +47,8 @@ gulp.task('webserver', function() {
 
 
 gulp.task('fonts', function() {
-   return gulp.src('./node_modules/materialize-css/fonts/**')
-       .pipe(gulp.dest('dist/fonts'));
+  return gulp.src('./node_modules/materialize-css/fonts/**')
+    .pipe(gulp.dest('dist/fonts'));
 });
 
 gulp.task('html', function() {
@@ -55,8 +57,10 @@ gulp.task('html', function() {
 });
 
 gulp.task('validate', function() {
-  return gulp.src(['./events.json', './2016/*.json', './2015/*.json'])
+  return gulp.src(['./events/*.json'])
     .pipe(jsonSchema('schema.json'));
 });
 
-gulp.task('default', ['compress', 'scss', 'fonts', 'validate']);
+gulp.task('generate', ['validate'], shell.task("node bin/generate.js"));
+
+gulp.task('default', ['generate', 'compress', 'scss', 'fonts']);

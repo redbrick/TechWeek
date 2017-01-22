@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{{ name }} {{ year }}| {{ Location }}</title>
+    <link type="text/css" rel="stylesheet" href="/css/main.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="sub-wrap">
+        <header class="title">
+          <h1 class="title__text"><a href="/"><span class="title__text__colour">{{{ splitTitle name }}}</a></h1>
+          <p>{{ location }} {{ start }} - {{ end }} {{ month }} {{ year }}</p>
+          <ul class="menu">{{#each pages}}
+            <li class="menu__item">
+              <a href="/{{ url }}">{{ title }}</a>
+            </li>
+            {{/each}}</ul>
+        </header>
+        <!-- Countdown is show up to 10 minutes before the event -->
+        <main>
+          <div class="countdown">
+            TechWeek Starts in:
+            <div class="countdown__counter">
+              <span>&nbsp;</span>
+              <span>&nbsp;</span>
+              <span>&nbsp;</span>
+              <span>&nbsp;</span>
+            </div>
+          </div>
+          <!-- 10 minutes before start of the event the livestream will come on -->
+          <div class="container livestream">
+            <iframe id="live" src="{{ video }}" width="100%" height="400" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" webkitallowfullscreen="" allowfullscreen=""></iframe>
+          </div>
+        </main>
+      </div>
+      <!-- All events are loaded into this element -->
+      <div class="card-container">
+        <ul class="collapsible popout card-container__events" data-collapsible="accordion">{{#each days}}
+          <div class="card-container">
+            <ul class="collapsible popout card-container__events" data-collapsible="accordion">
+              <li data-hash="#{{ day }}" class="active">
+                <div id="#{{ day }}" class="collapsible-header container day">
+                  <h5 class="day__title" data-position="right" style="color: rgb(233, 30, 99);">
+                    <span class="day__title__bold">{{ day }}</span> - {{ description }}
+                  </h5>
+                </div>
+                <div class="collapsible-body" style="display: block;">
+                  <ul id="{{ day }}-events" class="collapsible sub-collapsible" data-collepsible="accordion"> {{#each events}}
+                    <li>
+                      <div class="collapsible-header event-card">
+                        <div class="event-card__time"> {{ time }} </div>
+                        <div class="event-card__event"> {{ name }} </div>
+                        <div class="event-card__place"> {{ place.id }} </div>
+                      </div>
+                      <div class="collapsible-body" style="display: block;">
+                        <p> By: <i>{{ by }}</i> </p>
+                        <p>{{ description }}</p>
+                      </div>
+                    </li>
+                  {{/each}}</ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        {{/each}}</ul>
+      </div>
+    </div>
+    <!-- The script is loaded and ran -->
+    <script> var start = (new Date('{{live}}'));</script>
+    <script type="text/javascript" src="/js/main.min.js"></script>
+  </body>
+</html>
