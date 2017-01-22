@@ -6,7 +6,7 @@
   "scripts": {
     "test": "eslint js/main,js && bin/check-event-json && gulp",
     "dev": "gulp dev",
-    "postinstall": "gulp",
+    "postinstall": "npm rebuild node-sass && gulp",
     "gulp": "gulp"
   },
   "repository": {
