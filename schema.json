@@ -4,13 +4,6 @@
   "title": "Root schema.",
   "description": "An explanation about the purpose of this instance.",
   "properties": {
-    "name": {
-      "type": "string",
-      "minLength": 1,
-      "title": "Name schema.",
-      "description": "An explanation about the purpose of this instance.",
-      "default": "TechWeek"
-    },
     "location": {
       "type": "string",
       "minLength": 1,
@@ -184,15 +177,11 @@
     }
   },
   "required": [
-    "name",
     "location",
     "start",
     "end",
     "month",
     "year",
-    "live",
-    "archive",
-    "video",
     "days"
   ]
 }

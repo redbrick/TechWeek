@@ -1,20 +1,30 @@
 const Handlebars = require('handlebars');
 const fs = require('fs');
-const events = require(__dirname + '/../events.json');
+const path = require('path');
+const config = require(__dirname + '/../config.json');
 const template = fs.readFileSync(__dirname + '/../template.handlebars',  "utf-8");
 
-function render (source, events, url) {
-  let template = Handlebars.compile(source);
-  let output = template(events);
-  if (!fs.existsSync(__dirname + '/../dist')) { fs.mkdirSync(__dirname + '/../dist'); }
-  dir = __dirname + '/../dist';
+let pages = path.join(__dirname, '..', 'pages');
+if(config.folder) {
+  pages = path.join(__dirname, '..', config.folder);
+}
+
+let outputDir = path.join(__dirname, '..', 'dist')
+if (config.output) {
+  outputDir = path.join(__dirname, '..', config.output);
+}
+
+function render (template, page, url) {
+  let output = (Handlebars.compile(template))(page);
+  if (!fs.existsSync(outputDir)) { fs.mkdirSync(outputDir); }
+  let dir = outputDir
   if (url) {
-    dir = dir + '/' + url;
+    dir = path.join(dir, url);
     if (!fs.existsSync(dir)){
       fs.mkdirSync(dir);
     }
   }
-  fs.writeFile(dir + '/index.html', output, 'utf8', (err) => { if (err) throw err; });
+  fs.writeFile(path.join(dir, 'index.html'), output, 'utf8', (err) => { if (err) throw err; });
 }
 
 Handlebars.registerHelper('splitTitle', function(title) {
@@ -24,8 +34,9 @@ Handlebars.registerHelper('splitTitle', function(title) {
   return s1 + "</span>" + s2;
 });
 
-for (let page of events) {
-  let json = require(__dirname + '/../events/' + page.file);
-  json.pages = events;
+for (let page of config.pages) {
+  let json = require(path.join(pages, page.file));
+  json.pages = config.pages;
+  json.title = config.title;
   render(template, json, page.url);
 }

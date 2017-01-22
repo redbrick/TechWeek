@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>{{ name }} {{ year }}| {{ Location }}</title>
+    <title>{{ title }} {{ year }}| {{ Location }}</title>
     <link type="text/css" rel="stylesheet" href="/css/main.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
@@ -10,7 +10,7 @@
     <div class="wrapper">
       <div class="sub-wrap">
         <header class="title">
-          <h1 class="title__text"><a href="/"><span class="title__text__colour">{{{ splitTitle name }}}</a></h1>
+          <h1 class="title__text"><a href="/"><span class="title__text__colour">{{{ splitTitle title }}}</a></h1>
           <p>{{ location }} {{ start }} - {{ end }} {{ month }} {{ year }}</p>
           <ul class="menu">{{#each pages}}
             <li class="menu__item">
@@ -21,7 +21,7 @@
         <!-- Countdown is show up to 10 minutes before the event -->
         <main>
           <div class="countdown">
-            TechWeek Starts in:
+            {{ title }} Starts in:
             <div class="countdown__counter">
               <span>&nbsp;</span>
               <span>&nbsp;</span>
