@@ -29,6 +29,7 @@
     "gulp-clean-css": "^2.0.12",
     "gulp-concat": "^2.6.0",
     "gulp-connect": "^5.0.0",
+    "gulp-htmlmin": "^3.0.0",
     "gulp-json-schema": "^1.0.0",
     "gulp-minify": "0.0.14",
     "gulp-rename": "^1.2.2",

@@ -8,6 +8,7 @@ const connect = require('gulp-connect');
 const jsonSchema = require('gulp-json-schema');
 const babel = require('gulp-babel');
 const shell = require('gulp-shell')
+const htmlmin = require('gulp-htmlmin');
 
 gulp.task('dev', ['webserver'], function () {
     gulp.watch(['./css/*.scss', './js/*.js', './**/*.handlebars', './**/*.json'], ['scss', 'compress', 'generate', 'html']);
@@ -63,4 +64,8 @@ gulp.task('validate', function() {
 
 gulp.task('generate', ['validate'], shell.task("node bin/generate.js"));
 
-gulp.task('default', ['generate', 'compress', 'scss', 'fonts']);
+gulp.task('default', ['generate', 'compress', 'scss', 'fonts'], function () {
+  return gulp.src('dist/**/*.html')
+    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(gulp.dest('dist'));
+});
