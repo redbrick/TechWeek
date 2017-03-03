@@ -1,43 +1,51 @@
-'use strict';
+#!/usr/bin/env node
 const Handlebars = require('handlebars');
 const fs = require('fs');
 const path = require('path');
-const config = require(__dirname + '/../config.json');
-const template = fs.readFileSync(__dirname + '/../template.handlebars',  'utf-8');
-
-let pages = path.join(__dirname, '..', 'pages');
-if(config.folder) {
-  pages = path.join(__dirname, '..', config.folder);
-}
-
-let outputDir = path.join(__dirname, '..', 'dist');
-if (config.output) {
-  outputDir = path.join(__dirname, '..', config.output);
-}
+const fm = require('json-front-matter');
+const marked = require('marked');
+const config = require(path.join(process.cwd(), 'config.json'));
+const source = path.join(process.cwd(), config.source || 'source');
+const outputDir = path.join(process.cwd(), config.output || 'public');
 
 function render (template, page, url) {
-  const output = (Handlebars.compile(template))(page);
-  if (!fs.existsSync(outputDir)) { fs.mkdirSync(outputDir); }
+  template = `${template}.hbs`;
+  const output = Handlebars.compile(
+    fs.readFileSync(path.join(process.cwd(), 'templates', template), 'utf-8')
+  )(page);
+  if (!fs.existsSync(outputDir)) {
+    fs.mkdirSync(outputDir);
+  }
   let dir = outputDir;
-  if (url) {
+  if (url !== 'index') {
     dir = path.join(dir, url);
-    if (!fs.existsSync(dir)){
+    if (!fs.existsSync(dir)) {
       fs.mkdirSync(dir);
     }
   }
-  fs.writeFile(path.join(dir, 'index.html'), output, 'utf8', (err) => { if (err) throw err; });
+  fs.writeFile(path.join(dir, 'index.html'), output, 'utf8', err => {
+    if (err) throw err;
+  });
 }
 
-Handlebars.registerHelper('splitTitle', function(title) {
+Handlebars.registerHelper('splitTitle', title => {
   const middle = Math.floor(title.length / 2);
   const s1 = title.substr(0, middle);
   const s2 = title.substr(middle);
-  return s1 + '</span>' + s2;
+  return `${s1}</span>${s2}`;
 });
 
-for (const page of config.pages) {
-  const json = require(path.join(pages, page.file));
-  json.pages = config.pages;
-  json.title = config.title;
-  render(template, json, page.url);
-}
+fs.readdir(source, (err, pages) => {
+  if (err) throw err;
+  for (const page of pages) {
+    const url = path.parse(page).name;
+    fs.readFile(path.join(source, page), 'utf-8', (err, data) => {
+      if (err) throw err;
+      const file = fm.parse(data);
+      const json = file.attributes;
+      json.site = config;
+      json.body = marked(file.body);
+      render(json.template, json, url);
+    });
+  }
+});

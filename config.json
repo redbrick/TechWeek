@@ -1,24 +1,23 @@
 {
   "title": "TechWeek",
-  "folder": "events",
+  "source": "pages",
   "output": "dist",
-  "pages": [
+  "menu": [
     {
       "title": "Home",
-      "file": "2017.json",
       "url": ""
     }, {
       "title": "2016",
-      "file": "2016.json",
       "url": "2016"
     }, {
       "title": "2015",
-      "file": "2015.json",
       "url": "2015"
     }, {
       "title": "2014",
-      "file": "2014.json",
       "url": "2014"
+    }, {
+      "title": "Call For Talks",
+      "url": "CFT"
     }
   ]
 }

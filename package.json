@@ -4,11 +4,12 @@
   "description": "This repository contains the Techweek website",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "eslint js/* bin/* && bin/check-event-json && gulp",
+    "test": "eslint js/* bin/* && node bin/checkEventJson.js && gulp",
     "dev": "gulp dev",
     "postinstall": "gulp",
-    "lint": "eslint",
-    "build": "gulp"
+    "lint": "eslint .",
+    "build": "gulp",
+    "fix": "eslint . --fix"
   },
   "repository": {
     "type": "git",
@@ -21,78 +22,38 @@
   },
   "homepage": "https://github.com/redbrick/techweek.dcu.ie#readme",
   "dependencies": {
-    "babel-preset-es2015": "^6.16.0",
+    "glob": "^7.1.0",
+    "handlebars": "^4.0.6",
+    "jquery": "^2.2.4",
+    "json-front-matter": "^1.0.0",
+    "jsonschema": "^1.1.1",
+    "marked": "^0.3.6",
+    "materialize-css": "^0.97.7"
+  },
+  "devDependencies": {
+    "babel-cli": "6.23.0",
+    "babel-core": "6.23.1",
+    "babel-eslint": "7.1.1",
+    "babel-plugin-add-module-exports": "0.2.1",
+    "babel-plugin-es6-promise": "1.1.1",
+    "babel-plugin-syntax-async-functions": "6.13.0",
+    "babel-plugin-transform-async-to-generator": "6.22.0",
+    "babel-plugin-transform-object-assign": "6.22.0",
+    "babel-preset-es2015": "6.22.0",
     "eslint": "^3.6.1",
     "eslint-plugin-json": "^1.2.0",
-    "glob": "^7.1.0",
+    "eslint-config-standard": "6.2.1",
+    "eslint-plugin-promise": "3.4.2",
+    "eslint-plugin-standard": "2.0.1",
     "gulp": "^3.9.1",
     "gulp-babel": "^6.1.2",
     "gulp-clean-css": "^2.0.12",
     "gulp-concat": "^2.6.0",
     "gulp-connect": "^5.0.0",
     "gulp-htmlmin": "^3.0.0",
-    "gulp-json-schema": "^1.0.0",
     "gulp-minify": "0.0.14",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.3.2",
-    "gulp-shell": "^0.5.2",
-    "handlebars": "^4.0.6",
-    "jquery": "^2.2.4",
-    "materialize-css": "^0.97.7"
-  },
-  "eslintConfig": {
-    "plugins": [
-      "json"
-    ],
-    "env": {
-      "browser": true,
-      "es6": true,
-      "node": true,
-      "jquery": true
-    },
-    "globals": {
-      "start": true
-    },
-    "extends": "eslint:recommended",
-    "rules": {
-      "no-console": 0,
-      "indent": [
-        "error",
-        2
-      ],
-      "linebreak-style": [
-        "error",
-        "unix"
-      ],
-      "quotes": [
-        "error",
-        "single"
-      ],
-      "semi": [
-        "error",
-        "always"
-      ],
-      "no-var": [
-        "error"
-      ],
-      "prefer-const": [
-        "error",
-        {
-          "destructuring": "any",
-          "ignoreReadBeforeAssign": false
-        }
-      ]
-    }
-  },
-  "babel": {
-    "presets": [
-      [
-        "es2015",
-        {
-          "modules": false
-        }
-      ]
-    ],
-    "compact": true
+    "gulp-shell": "^0.5.2"
   }
 }

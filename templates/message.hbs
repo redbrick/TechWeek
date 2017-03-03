@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{{ site.title }} | {{ title }}</title>
+    <link type="text/css" rel="stylesheet" href="/css/main.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="sub-wrap">
+        <header class="title">
+          <h1 class="title__text"><a href="/"><span class="title__text__colour">{{{ splitTitle site.title }}}</a></h1>
+          <ul class="menu">{{#each site.menu}}
+            <li class="menu__item">
+              <a href="/{{ url }}">{{ title }}</a>
+            </li>
+          {{/each}}</ul>
+        </header>
+        <main>
+          <div class="card-message">
+            <div class="container" >
+              <div class="card blue-grey darken-1">
+                <div class="card-content white-text">
+                  <span class="card-title"> {{ title }} </span>
+                  {{{ body }}}
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+    <script type="text/javascript" src="/js/main.min.js"></script>
+  </body>
+</html>

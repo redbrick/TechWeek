@@ -3,170 +3,177 @@
 @import '../node_modules/materialize-css/sass/materialize.scss';
 
 body {
-    background-color: $color-primary;
-    .wrapper {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+  background-color: $color-primary;
+  .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 
-        .sub-wrap {
-            .title {
-                margin: $title-margin;
-                text-align: center;
+    .sub-wrap {
+      .title {
+        margin: $title-margin;
+        text-align: center;
 
-                &__text {
-                    margin: $text-margin;
-                    font-size: $title-font-size;
-                    font-weight: $title-font-weight;
+        &__text {
+          margin: $text-margin;
+          font-size: $title-font-size;
+          font-weight: $title-font-weight;
 
-                    &__colour {
-                        color: $color-red;
-                        font-weight: $title-colored-font-weight;
-                    }
+          &__colour {
+            color: $color-red;
+            font-weight: $title-colored-font-weight;
+          }
 
-                    a {
-                        color: $color-black;
-                    }
-                }
-
-                .menu {
-                    list-style-type: none;
-                    margin: $menu-margin;
-                    padding: 0;
-                    overflow: hidden;
-                    display: flex;
-                    flex-wrap: wrap;
-                    justify-content: center;
-
-                    &__item {
-                        float: left;
-                        padding: 0 8px;
-                    }
-                }
-            }
+          a {
+            color: $color-black;
+          }
         }
-    }
-}
 
-.day {
+        .menu {
+          list-style-type: none;
+          margin: $menu-margin;
+          padding: 0;
+          overflow: hidden;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+
+          &__item {
+            float: left;
+            padding: 0 8px;
+          }
+        }
+      }
+    }
+
+    .card-message {
+      margin: 2em 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .day {
     margin-top: 1vh;
 
     &__title {
-        width: auto;
-        display: inline;
-        font-weight: $day-title-font-weight;
+      width: auto;
+      display: inline;
+      font-weight: $day-title-font-weight;
 
-        &__bold {
-            font-weight: $day-title-font-weight-bold;
-        }
+      &__bold {
+        font-weight: $day-title-font-weight-bold;
+      }
     }
-}
+  }
 
-.event-card {
+  .event-card {
     display: flex;
 
     &__time {
-        float: left;
-        display: inline-block;
-        font-size:$event-time-font-size;
-        width: 15%;
-        margin: $event-time-margin;
-        max-width: 5em;
+      float: left;
+      display: inline-block;
+      font-size:$event-time-font-size;
+      width: 15%;
+      margin: $event-time-margin;
+      max-width: 5em;
     }
 
     &__event {
-        display: inline-block;
-        width: 80%;
+      display: inline-block;
+      width: 80%;
     }
 
     &__place {
-        display: inline-block;
-        color: $color-black;
-        float: right;
+      display: inline-block;
+      color: $color-black;
+      float: right;
     }
-}
+  }
 
-p {
+  p {
     font-weight: $p-font-weight;
-}
+  }
 
-ul {
+  ul {
     margin: $ul-margin;
-}
+  }
 
-.collapsible-header {
+  .collapsible-header {
     height: initial;
     -webkit-transition: all .2s;
     border-bottom: 0;
     line-height: 1.5rem;
     padding: 1em;
-}
+  }
 
-.collapsible-body {
+  .collapsible-body {
     border-top: 0;
     border-bottom: 0;
 
     .collapsible {
-        box-shadow: 0 0;
-        border: 0;
+      box-shadow: 0 0;
+      border: 0;
     }
 
     .collapsible-body, .collapsible-header {
-        border-top: $collapsible-body-border;
+      border-top: $collapsible-body-border;
     }
-}
+  }
 
-.countdown {
+  .countdown {
     display: none;
     text-align: center;
 
     &__counter {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        font-size: medium;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      font-size: medium;
 
-        span {
-            display: block;
-            font-size: $countdown-font-size;
-        }
+      span {
+        display: block;
+        font-size: $countdown-font-size;
+      }
     }
-}
+  }
 
-.livestream {
+  .livestream {
     display: none;
     width: 80%;
-}
+  }
 
-.playlist {
+  .playlist {
     display: block;
     width: 100%;
-}
+  }
 
-.collapsible.popout > li {
+  .collapsible.popout > li {
     background-color: $color-white;
     margin: $popout-element-margin;
 
     &.active {
-        margin: $popout-element-margin-active;
+      margin: $popout-element-margin-active;
     }
-}
+  }
 
-.card-container {
+  .card-container {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 560px;
 
     &__events {
-        width: 80%;
+      width: 80%;
 
-        @media screen and (max-width: $large-phone) {
-            width: 100%;
-        }
+      @media screen and (max-width: $large-phone) {
+        width: 100%;
+      }
 
-        @media screen and (min-width: 800px) {
-            width: $card-width;
-        }
+      @media screen and (min-width: 800px) {
+        width: $card-width;
+      }
     }
+  }
 }

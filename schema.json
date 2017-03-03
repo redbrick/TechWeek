@@ -1,14 +1,20 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
-  "title": "Root schema.",
-  "description": "An explanation about the purpose of this instance.",
   "properties": {
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "default": "Home"
+    },
+    "template": {
+      "type": "string",
+      "minLength": 1,
+      "default": "schedule"
+    },
     "location": {
       "type": "string",
       "minLength": 1,
-      "title": "Location schema.",
-      "description": "An explanation about the purpose of this instance.",
       "default": "Dublin City University"
     },
     "start": {
@@ -18,9 +24,7 @@
       "minimum": 1,
       "exclusiveMaximum": false,
       "exclusiveMinimum": false,
-      "title": "Start schema.",
-      "description": "An explanation about the purpose of this instance.",
-      "default": 24
+      "default": 15
     },
     "end": {
       "type": "integer",
@@ -29,15 +33,11 @@
       "minimum": 1,
       "exclusiveMaximum": false,
       "exclusiveMinimum": false,
-      "title": "End schema.",
-      "description": "An explanation about the purpose of this instance.",
-      "default": 28
+      "default": 29
     },
     "month": {
       "type": "string",
       "minLength": 1,
-      "title": "Month schema.",
-      "description": "An explanation about the purpose of this instance.",
       "default": "March"
     },
     "year": {
@@ -47,102 +47,71 @@
       "minimum": 1,
       "exclusiveMaximum": false,
       "exclusiveMinimum": false,
-      "title": "Year schema.",
-      "description": "An explanation about the purpose of this instance.",
       "default": 2017
     },
     "live": {
       "type": "string",
       "minLength": 1,
-      "title": "Live schema.",
-      "description": "An explanation about the purpose of this instance.",
-      "default": "2017-03-24T12:00:00"
+      "default": "2017-03-15T17:00:00"
     },
     "archive": {
       "type": "string",
       "minLength": 1,
-      "title": "Archive schema.",
-      "description": "An explanation about the purpose of this instance.",
       "default": "false"
     },
     "video": {
       "type": "string",
       "minLength": 1,
-      "title": "Video schema.",
-      "description": "An explanation about the purpose of this instance.",
-      "default": ""
+      "default": "https://www.youtube.com/embed/videoseries?list=PLPaLJSHTDMFhbDmyUeik6IHXmzVtWQQxu"
     },
     "days": {
       "type": "array",
       "uniqueItems": false,
-      "title": "Days schema.",
-      "description": "An explanation about the purpose of this instance.",
       "items": {
         "type": "object",
-        "title": "4 schema.",
-        "description": "An explanation about the purpose of this instance.",
         "properties": {
           "day": {
             "type": "string",
             "minLength": 1,
-            "title": "Day schema.",
-            "description": "An explanation about the purpose of this instance.",
-            "default": "Friday"
+            "default": "Wednesday 29th"
           },
           "description": {
             "type": "string",
-            "title": "Description schema.",
-            "description": "An explanation about the purpose of this instance.",
-            "default": "Lightning Talks"
+            "minLength": 1,
+            "default": "Mobile Development"
           },
           "events": {
             "type": "array",
             "uniqueItems": false,
-            "title": "Events schema.",
-            "description": "An explanation about the purpose of this instance.",
             "items": {
               "type": "object",
-              "title": "3 schema.",
-              "description": "An explanation about the purpose of this instance.",
               "properties": {
                 "name": {
                   "type": "string",
                   "minLength": 1,
-                  "title": "Name schema.",
-                  "description": "An explanation about the purpose of this instance.",
                   "default": "TBA"
                 },
                 "by": {
                   "type": "string",
                   "minLength": 1,
-                  "title": "By schema.",
-                  "description": "An explanation about the purpose of this instance.",
                   "default": "TBA"
                 },
                 "time": {
                   "type": "string",
                   "minLength": 1,
-                  "title": "Time schema.",
-                  "description": "An explanation about the purpose of this instance.",
-                  "default": "16:00"
+                  "default": "17:00"
                 },
                 "place": {
                   "type": "object",
-                  "title": "Place schema.",
-                  "description": "An explanation about the purpose of this instance.",
                   "properties": {
                     "id": {
                       "type": "string",
                       "minLength": 1,
-                      "title": "Id schema.",
-                      "description": "An explanation about the purpose of this instance.",
-                      "default": "The Mezz"
+                      "default": "LG26"
                     },
                     "map": {
                       "type": "string",
                       "minLength": 1,
-                      "title": "Map schema.",
-                      "description": "An explanation about the purpose of this instance.",
                       "default": "Somewhere in DCU"
                     }
                   },
@@ -154,8 +123,6 @@
                 "description": {
                   "type": "string",
                   "minLength": 1,
-                  "title": "Description schema.",
-                  "description": "An explanation about the purpose of this instance.",
                   "default": "TBA"
                 }
               },
@@ -171,17 +138,23 @@
         },
         "required": [
           "day",
+          "description",
           "events"
         ]
       }
     }
   },
   "required": [
+    "title",
+    "template",
     "location",
     "start",
     "end",
     "month",
     "year",
+    "live",
+    "archive",
+    "video",
     "days"
   ]
 }
