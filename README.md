@@ -7,7 +7,7 @@ The website was written to have the Google Material Design look and feel. Materi
 To deploy to a server just run from the parent of of the folder you want to deploy too.  
 _example writen assuming folder deployed is techweek/dist_
 ```
-git clone https://github.com/redbrick/techweek.dcu.ie.git techweek
+git clone https://github.com/redbrick/techweek.git
 cd techweek
 npm install
 
