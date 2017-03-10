@@ -1,4 +1,4 @@
-# TechWeek Website [![CircleCI](https://circleci.com/gh/redbrick/techweek.dcu.ie/tree/master.svg?style=svg)](https://circleci.com/gh/redbrick/techweek.dcu.ie/tree/master)
+# TechWeek Website [![CircleCI](https://circleci.com/gh/redbrick/TechWeek.svg?style=svg)](https://circleci.com/gh/redbrick/TechWeek)
 This repository contains the Techweek website
 The website was written to have the Google Material Design look and feel. MaterializeCSS was used to speed up the process.  
 
