@@ -164,12 +164,17 @@ body {
     justify-content: center;
     width: 560px;
 
-    &__events {
-      width: 80%;
+    @media screen and (max-width: $large-phone) {
+      width: 460px
+    }
 
-      @media screen and (max-width: $large-phone) {
-        width: 100%;
-      }
+    @media screen and (max-width: $medium-phone) {
+      width: 320px
+    }
+
+
+    &__events {
+      width: 100%;
 
       @media screen and (min-width: 800px) {
         width: $card-width;
