@@ -22,32 +22,32 @@
       },
       "description": "Opening of TechWeek 2017"
     }, {
-      "name": "TBA",
-      "by": "TBA",
+      "name": "IOT security",
+      "by": "d_fens",
       "time": "15:05",
       "place": {
         "id": "LG26",
         "map": "Somewhere in DCU"
       },
-      "description": "TBA"
+      "description": "How IOT security has been developing over the last few years (it hasn't) and what flaws are typically seen in these devices"
     }, {
-      "name": "TBA",
-      "by": "TBA",
+      "name": "How IOT security has been developing over the last few years (it hasn't) and what flaws are typically seen in these devices",
+      "by": "Alan Neville",
       "time": "16:00",
       "place": {
         "id": "LG26",
         "map": "Somewhere in DCU"
       },
-      "description": "TBA!"
+      "description": "In late 2015, Symantec began investigating a suspicious piece of malware detected within a customers environment. Alan, a Senior Threat Intelligence Analyst takes you throguh the full investigation process, starting from a simple detection event to building out the bigger picture. The curious case of an Iranian actor or maybe two..."
     }, {
-      "name": "TBA",
-      "by": "TBA",
+      "name": "Offensive Security",
+      "by": "Ciaran McNally",
       "time": "17:00",
       "place": {
         "id": "LG26",
         "map": "Somewhere in DCU"
       },
-      "description": "TBA"
+      "description": "In a server far far away, some blackhat alliance is enumerating your services in preparation for an attack. They are plnning the fall of your companies empire. We will discuss the open source intelligence techniques such enemies use to identify weaknesses in your armour and examine the processes involved in their penetratoon testing methodology"
     }]
   }, {
     "day": "Wednesday-22th",
