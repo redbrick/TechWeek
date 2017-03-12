@@ -31,7 +31,7 @@
       },
       "description": "How IOT security has been developing over the last few years (it hasn't) and what flaws are typically seen in these devices"
     }, {
-      "name": "How IOT security has been developing over the last few years (it hasn't) and what flaws are typically seen in these devices",
+      "name": "iThe curious case of an Iranian actor or maybe two...",
       "by": "Alan Neville",
       "time": "16:00",
       "place": {
