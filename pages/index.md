@@ -50,7 +50,7 @@
       "description": "In a server far far away, some blackhat alliance is enumerating your services in preparation for an attack. They are plnning the fall of your companies empire. We will discuss the open source intelligence techniques such enemies use to identify weaknesses in your armour and examine the processes involved in their penetratoon testing methodology"
     }]
   }, {
-    "day": "Wednesday-22th",
+    "day": "Wednesday-22nd",
     "description": "Dev Tools",
     "events": [{
       "name": "TBA",
