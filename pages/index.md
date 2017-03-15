@@ -22,14 +22,14 @@
       },
       "description": "Opening of TechWeek 2017"
     }, {
-      "name": "IOT security",
-      "by": "d_fens",
+      "name": "BeyondCorp: A New Approach to Enterprise Security",
+      "by": "Donal Hunt - Site Reliability Engineering Manager in Google Ireland",
       "time": "15:05",
       "place": {
         "id": "LG26",
         "map": "Somewhere in DCU"
       },
-      "description": "How IOT security has been developing over the last few years (it hasn't) and what flaws are typically seen in these devices"
+      "description": "Virtually every company today uses firewalls to enforce perimeter security. However, this security model is problematic because, when that perimeter is breached, an attacker has relatively easy access to a company’s privileged intranet. As companies adopt mobile and cloud technologies, the perimeter is becoming increasingly difficult to enforce. Google is taking a different approach to network security. We are removing the requirement for a privileged intranet and moving our corporate applications to the Internet."
     }, {
       "name": "The curious case of an Iranian actor or maybe two...",
       "by": "Alan Neville",
@@ -40,9 +40,18 @@
       },
       "description": "In late 2015, Symantec began investigating a suspicious piece of malware detected within a customers environment. Alan, a Senior Threat Intelligence Analyst takes you throguh the full investigation process, starting from a simple detection event to building out the bigger picture. The curious case of an Iranian actor or maybe two..."
     }, {
+      "name": "IOT security",
+      "by": "d_fens",
+      "time": "17:00",
+      "place": {
+        "id": "LG26",
+        "map": "Somewhere in DCU"
+      },
+      "description": "How IOT security has been developing over the last few years (it hasn't) and what flaws are typically seen in these devices"
+    }, {
       "name": "Offensive Security",
       "by": "Ciaran McNally",
-      "time": "17:00",
+      "time": "17:30",
       "place": {
         "id": "LG26",
         "map": "Somewhere in DCU"
