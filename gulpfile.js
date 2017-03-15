@@ -8,6 +8,7 @@ const connect = require('gulp-connect');
 const babel = require('gulp-babel');
 const shell = require('gulp-shell');
 const htmlmin = require('gulp-htmlmin');
+const uncss = require('gulp-uncss');
 
 gulp.task('dev', ['webserver'], () => {
   gulp.watch(['./css/*.scss', './js/*.js', './templates/*.hbs', './**/*.json', './**/*.md'], [
@@ -38,12 +39,15 @@ gulp.task('compress', () => gulp
   )
   .pipe(gulp.dest('dist/js')));
 
-gulp.task('scss', () =>
+gulp.task('scss', ['generate'], () =>
   gulp
     .src('css/main.scss')
     .pipe(sass())
     .pipe(cleanCSS({ compatibility: 'ie8', processImport: false }))
     .pipe(rename({ suffix: '.min' }))
+    .pipe(uncss({
+      html: [ './**/*.html']
+    }))
     .pipe(gulp.dest('dist/css')));
 
 gulp.task('webserver', ['default'], () => {
@@ -62,5 +66,5 @@ gulp.task('html', () => gulp.src('./**/*.html').pipe(connect.reload()));
 
 gulp.task('generate', shell.task('node bin/generate.js'));
 
-gulp.task('default', ['generate', 'compress', 'scss', 'fonts'], () =>
+gulp.task('default', ['compress', 'scss', 'fonts'], () =>
   gulp.src('dist/**/*.html').pipe(htmlmin({ collapseWhitespace: true })).pipe(gulp.dest('dist')));

@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/redbrick/techweek.dcu.ie#readme",
   "dependencies": {
+    "es6-promise": "^4",
     "glob": "^7.1.0",
     "handlebars": "^4.0.6",
     "jquery": "^2.2.4",
@@ -41,8 +42,8 @@
     "babel-plugin-transform-object-assign": "6.22.0",
     "babel-preset-es2015": "6.22.0",
     "eslint": "^3.6.1",
-    "eslint-plugin-json": "^1.2.0",
     "eslint-config-standard": "6.2.1",
+    "eslint-plugin-json": "^1.2.0",
     "eslint-plugin-promise": "3.4.2",
     "eslint-plugin-standard": "2.0.1",
     "gulp": "^3.9.1",
@@ -54,6 +55,7 @@
     "gulp-minify": "0.0.14",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.3.2",
-    "gulp-shell": "^0.5.2"
+    "gulp-shell": "^0.5.2",
+    "gulp-uncss": "^1.0.6"
   }
 }
