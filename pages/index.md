@@ -6,7 +6,7 @@
   "end": 29,
   "month": "March",
   "year": 2017,
-  "live": "2017-03-15T17:00:00",
+  "live": "2017-03-15T15:00:00",
   "archive": "false",
   "video": "https://www.youtube.com/embed/videoseries?list=PLPaLJSHTDMFhbDmyUeik6IHXmzVtWQQxu",
   "days": [{
