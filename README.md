@@ -11,6 +11,9 @@ git clone https://github.com/redbrick/techweek.git
 cd techweek
 npm install
 
+### Docker
+```
+docker-compose up install
 ```
 
 ## How it works
@@ -31,6 +34,11 @@ Gulp concats this with materilize and minifies it to `dist/js`
 * When running the files locally, run it using a web server or you will have problems with Same-origin policy. _no longer true as site is regenerated_
 A simple solution is to run `gulp dev` which will compile the less, watch it and start a webserver at techweek.dev:8000
 
+### Docker
+```
+docker-compose up install
+docker-compose up dev
+```
 ### CSS
 All the css is compiled from less in the less directory.
 Run `gulp dev` to have gulp watch the less directory and compile all the less in to `dist/css`.

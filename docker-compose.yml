@@ -1,0 +1,22 @@
+version: "3"
+
+services:
+  install:
+    image: node:boron
+    container_name: techweek-install
+    command: npm install --unsafe-perm
+    working_dir: /usr/src/app
+    volumes:
+      -  $PWD:/usr/src/app
+
+  dev:
+    image: node:boron
+    container_name: techweek-server
+    command: npm run dev
+    working_dir: /usr/src/app
+    tty: true
+    ports:
+      - "8000:8000"
+      - "35729:35729"
+    volumes:
+      -  $PWD:/usr/src/app

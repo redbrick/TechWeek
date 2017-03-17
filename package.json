@@ -5,10 +5,10 @@
   "main": "gulpfile.js",
   "scripts": {
     "test": "eslint js/* bin/* && node bin/checkEventJson.js && gulp",
-    "dev": "gulp dev",
-    "postinstall": "gulp",
+    "dev": "npm run build dev",
+    "postinstall": "node node_modules/gulp/bin/gulp.js",
     "lint": "eslint .",
-    "build": "gulp",
+    "build": "node node_modules/gulp/bin/gulp.js",
     "fix": "eslint . --fix"
   },
   "repository": {
