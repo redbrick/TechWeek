@@ -62,32 +62,23 @@
     "day": "Wednesday-22nd",
     "description": "Dev Tools",
     "events": [{
-      "name": "TBA",
-      "by": "TBA",
+      "name": "Getting your code into production and keeping it there.",
+      "by": "Conor - Circle CI",
       "time": "15:00",
       "place": {
         "id": "LG26",
         "map": "Somewhere in DCU"
       },
-      "description": "TBA"
+      "description": " Writing code is only the start of the process. Getting it into production and keeping it up and running requires a lot of tooling and techniques. I'm going to give a quick tour through some of the things you need to do to turn software into a running product."
     }, {
-      "name": "TBA",
-      "by": "TBA",
+      "name": "Docker: A Better Way for Dependencies",
+      "by": "Cian Buter",
       "time": "16:00",
       "place": {
         "id": "LG26",
         "map": "Somewhere in DCU"
       },
-      "description": "TBA!"
-    }, {
-      "name": "TBA",
-      "by": "TBA",
-      "time": "17:00",
-      "place": {
-        "id": "LG26",
-        "map": "Somewhere in DCU"
-      },
-      "description": "TBA"
+      "description": "What is Docker and why you should care. How does docker help you as a developer and how can it be used to speed up development and make your program more reliable "
     }]
   }, {
     "day": "Wednesday-29th",
