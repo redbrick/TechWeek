@@ -80,36 +80,5 @@
       },
       "description": "What is Docker and why you should care. How does docker help you as a developer and how can it be used to speed up development and make your program more reliable "
     }]
-  }, {
-    "day": "Wednesday-29th",
-    "description": "Mobile Development",
-    "events": [{
-      "name": "TBA",
-      "by": "TBA",
-      "time": "15:00",
-      "place": {
-        "id": "LG26",
-        "map": "Somewhere in DCU"
-      },
-      "description": "TBA"
-    }, {
-      "name": "TBA",
-      "by": "TBA",
-      "time": "16:00",
-      "place": {
-        "id": "LG26",
-        "map": "Somewhere in DCU"
-      },
-      "description": "TBA!"
-    }, {
-      "name": "TBA",
-      "by": "TBA",
-      "time": "17:00",
-      "place": {
-        "id": "LG26",
-        "map": "Somewhere in DCU"
-      },
-      "description": "TBA"
-    }]
   }]
 }}}
