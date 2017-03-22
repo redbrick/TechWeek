@@ -72,7 +72,7 @@
       "description": " Writing code is only the start of the process. Getting it into production and keeping it up and running requires a lot of tooling and techniques. I'm going to give a quick tour through some of the things you need to do to turn software into a running product."
     }, {
       "name": "Docker: A Better Way for Dependencies",
-      "by": "Cian Buter",
+      "by": "Cian Butler",
       "time": "16:00",
       "place": {
         "id": "LG26",
