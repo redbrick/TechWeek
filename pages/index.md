@@ -8,7 +8,7 @@
   "year": 2017,
   "live": "2017-03-22T15:00:00",
   "archive": "false",
-  "video": "https://media.heanet.ie/player/live/8bfc5a1e1ef1ffe8f85e180bb18b323b",
+  "video": "https://www.youtube.com/embed/videoseries?list=PLPaLJSHTDMFhqzNc5C8UPJTQSKnKrjVP-",
   "days": [{
     "day": "Wednesday-15th",
     "description": "Security",
