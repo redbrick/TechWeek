@@ -46,7 +46,7 @@ gulp.task('scss', ['generate'], () =>
     .pipe(cleanCSS({ compatibility: 'ie8', processImport: false }))
     .pipe(rename({ suffix: '.min' }))
     .pipe(uncss({
-      html: [ './**/*.html']
+      html: ['./**/*.html'],
     }))
     .pipe(gulp.dest('dist/css')));
 
@@ -54,7 +54,6 @@ gulp.task('webserver', ['default'], () => {
   connect.server({
     port      : 8000,
     root      : 'dist',
-    host      : 'techweek.dev',
     livereload: true,
   });
 });
