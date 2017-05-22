@@ -1,4 +1,7 @@
-# TechWeek Website [![CircleCI](https://circleci.com/gh/redbrick/TechWeek.svg?style=svg)](https://circleci.com/gh/redbrick/TechWeek)
+# TechWeek Website
+
+[![CircleCI](https://circleci.com/gh/redbrick/TechWeek.svg?style=svg)](https://circleci.com/gh/redbrick/TechWeek)
+---
 This repository contains the Techweek website
 The website was written to have the Google Material Design look and feel. MaterializeCSS was used to speed up the process.  
 
@@ -6,12 +9,15 @@ The website was written to have the Google Material Design look and feel. Materi
 
 To deploy to a server just run from the parent of of the folder you want to deploy too.  
 _example writen assuming folder deployed is techweek/dist_
+
 ```
 git clone https://github.com/redbrick/techweek.git
 cd techweek
 npm install
+```
 
 ### Docker
+
 ```
 docker-compose up install
 ```
@@ -31,15 +37,20 @@ Gulp concats this with materilize and minifies it to `dist/js`
 ## Development
 
 ### Local Development
+
 * When running the files locally, run it using a web server or you will have problems with Same-origin policy. _no longer true as site is regenerated_
+
 A simple solution is to run `gulp dev` which will compile the less, watch it and start a webserver at techweek.dev:8000
 
 ### Docker
+
 ```
 docker-compose up install
 docker-compose up dev
 ```
-### CSS
-All the css is compiled from less in the less directory.
+
+### sCSS
+
+All the css is compiled from scss in the css directory.
 Run `gulp dev` to have gulp watch the less directory and compile all the less in to `dist/css`.
 Run `gulp` to compile the sass to css in `dist/css`
