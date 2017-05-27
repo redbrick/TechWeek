@@ -1,4 +1,4 @@
-{{{
+{
   "title": "Home",
   "template": "schedule",
   "location": "Dublin City University",
@@ -81,4 +81,4 @@
       "description": "What is Docker and why you should care. How does docker help you as a developer and how can it be used to speed up development and make your program more reliable "
     }]
   }]
-}}}
+}

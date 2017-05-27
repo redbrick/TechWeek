@@ -1,7 +1,10 @@
 {
   "title": "TechWeek",
   "source": "pages",
-  "output": "dist",
+  "output": {
+    "dir": "dist"
+  },
+  "static": ["js", "font", "images"],
   "menu": [
     {
       "title": "Home",

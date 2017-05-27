@@ -1,6 +1,5 @@
-{{{
+{
   "title": "2014",
-  "template": "schedule",
   "location": "Dublin City University",
   "start": 3,
   "end": 7,
@@ -192,4 +191,4 @@
       "description": "Alan Neville is also a Senior Reverse Engineer and Malware expert working in Symantec. This talk will follow up on Andrea's with a higher level view of where reverse engineering fits into a malware attack response team. This will use real world case studies, Providing expert insight into threat analysis and some of the massive cyber attacks we would never otherwise hear about."
     }]
   }]
-}}}
+}

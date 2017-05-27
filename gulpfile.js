@@ -1,5 +1,4 @@
 const gulp = require('gulp');
-const sass = require('gulp-sass');
 const concat = require('gulp-concat');
 const cleanCSS = require('gulp-clean-css');
 const minify = require('gulp-minify');
@@ -11,10 +10,8 @@ const htmlmin = require('gulp-htmlmin');
 const uncss = require('gulp-uncss');
 
 gulp.task('dev', ['webserver'], () => {
-  gulp.watch(['./css/*.scss', './js/*.js', './templates/*.hbs', './**/*.json', './**/*.md'], [
-    'scss',
-    'compress',
-    'generate',
+  gulp.watch(['./theme/css/*.scss', './theme/js/*.js', './theme/templates/*.hbs', './pages/**/*'], [
+    'css',
     'html',
   ]);
 });
@@ -22,7 +19,8 @@ gulp.task('dev', ['webserver'], () => {
 gulp.task('compress', () => gulp
   .src([
     './node_modules/jquery/dist/jquery.js',
-    './js/*.js',
+    '!./theme/js/*.min.js',
+    './theme/js/*.js',
     './node_modules/materialize-css/dist/js/materialize.js',
   ])
   .pipe(concat('main.js'))
@@ -37,16 +35,15 @@ gulp.task('compress', () => gulp
       ignoreFiles: ['.combo.js', '*.min.js'],
     })
   )
-  .pipe(gulp.dest('dist/js')));
+  .pipe(gulp.dest('theme/js')));
 
-gulp.task('scss', ['generate'], () =>
+gulp.task('css', ['generate'], () =>
   gulp
-    .src('css/main.scss')
-    .pipe(sass())
+    .src('dist/css/main.css')
     .pipe(cleanCSS({ compatibility: 'ie8', processImport: false }))
     .pipe(rename({ suffix: '.min' }))
     .pipe(uncss({
-      html: [ './**/*.html']
+      html: ['./**/*.html'],
     }))
     .pipe(gulp.dest('dist/css')));
 
@@ -54,17 +51,13 @@ gulp.task('webserver', ['default'], () => {
   connect.server({
     port      : 8000,
     root      : 'dist',
-    host      : 'techweek.dev',
     livereload: true,
   });
 });
 
-gulp.task('fonts', () =>
-  gulp.src('./node_modules/materialize-css/fonts/**').pipe(gulp.dest('dist/fonts')));
-
 gulp.task('html', () => gulp.src('./**/*.html').pipe(connect.reload()));
 
-gulp.task('generate', shell.task('node bin/generate.js'));
+gulp.task('generate', ['compress'], shell.task('yarn run event-gen'));
 
-gulp.task('default', ['compress', 'scss', 'fonts'], () =>
+gulp.task('default', ['css'], () =>
   gulp.src('dist/**/*.html').pipe(htmlmin({ collapseWhitespace: true })).pipe(gulp.dest('dist')));

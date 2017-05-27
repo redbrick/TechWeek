@@ -1,4 +1,4 @@
-{{{
+{
   "title": "2015",
   "template": "schedule",
   "location": "Dublin City University",
@@ -300,4 +300,4 @@
       "description": "From your command line to production environment just hitting a key. How can this be achieved? A brief introduction to CI/CD, some tools and an example on how this could be done promoting your package from one environment to the other until it reaches production. Tools: git, maven, Jenkins and shell script."
     }]
   }]
-}}}
+}
