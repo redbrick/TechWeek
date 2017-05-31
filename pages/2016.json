@@ -9,259 +9,296 @@
   "live": "2016-02-15T12:00:00",
   "archive": "true",
   "video": "https://www.youtube.com/embed/videoseries?list=PLPaLJSHTDMFhbDmyUeik6IHXmzVtWQQxu",
-  "days": [{
-    "day": "Monday",
-    "description": "Associates",
-    "events": [{
-      "name": "Opening Event",
-      "by": "Redbrick DCU's Computer Networking Society",
-      "time": "13:00",
-      "place": {
-        "id": "The Mezz",
-        "map": "Somewhere in DCU"
-      },
-      "description": "Opening of TechWeek 2016"
-    }, {
-      "name": "Lunch",
-      "by": "Somewhere in DCU",
-      "time": "14:00",
-      "place": {
-        "id": "The Mezz",
-        "map": "Somewhere in DCU"
-      },
-      "description": "Lunch Time!"
-    }, {
-      "name": "Competitive Programming = Money",
-      "by": "Cian Ruane & Noah Donnelly",
-      "time": "15:00",
-      "place": {
-        "id": "The Mezz",
-        "map": "Somewhere in DCU"
-      },
-      "description": "Where do you picture yourself in 5 years? How\u2019s your relationship with your parents? Do you feel a longing for meaning and direction in your life? In this talk Cian Ruane and Noah Donnelly will introduce you to the world of competitive programming."
-    }, {
-      "name": "Fergus O'Dea (NDRC)",
-      "by": "Fergus O'Dea",
-      "time": "16:00",
-      "place": {
-        "id": "The Mezz",
-        "map": "Somewhere in DCU"
-      },
-      "description": "A session on what's involved in a tech startup raising an initial round of funding given by Fergus O'Dea from NDRC (National Digital Research Centre), a leading investor in early-stage digital startups."
-    }, {
-      "name": "OpenStack - an Intro",
-      "by": "Graham Hayes - Openstack Designate Project Team Leader",
-      "time": "17:00",
-      "place": {
-        "id": "The Mezz",
-        "map": "Somewhere in DCU"
-      },
-      "description": "An over of what OpenStack is, and how you can use it, I will cover the main projects available in OpenStack, what they do, and how they link together. I will also cover how you can get involved. https://graham.hayes.ie"
-    }]
-  }, {
-    "day": "Tuesday",
-    "description": "Associates",
-    "events": [{
-      "name": "Citrix Workspace Cloud",
-      "by": "Nicholas Connolly - Citrix",
-      "time": "12:00",
-      "place": {
-        "id": "The Mezz",
-        "map": "Somewhere in DCU"
-      },
-      "description": "Citrix Workspace Cloud (CWC) is a serviced-based product to deliver workspaces. Citrix describes this as \u201ca cloud-based control plane that enables partners and customers to unify, secure and deliver workspace services"
-    }, {
-      "name": "Prometheus: A Next Generation Monitoring System",
-      "by": "Brian Brazil - Robust Perception",
-      "time": "13:00",
-      "place": {
-        "id": "The Mezz",
-        "map": "Somewhere in DCU"
-      },
-      "description": "Prometheus is a scalable, reliabile, easy to use and powerful monitoring system. This talk will look at the ideas behind it and how you can take advantage of them. Since publicly launching the open source project, over a year ago, over 100 companies have now rely on it and to date there are over 250 contributers to the codebase."
-    }, {
-      "name": "Lunch",
-      "by": "Somewhere in DCU",
-      "time": "14:00",
-      "place": {
-        "id": "The Mezz",
-        "map": "Somewhere in DCU"
-      },
-      "description": "Lunch Time!"
-    }, {
-      "name": "Hackers in the Movies",
-      "by": "Damian Gordoni - DIT Universal Design RG",
-      "time": "17:00",
-      "place": {
-        "id": "The Mezz",
-        "map": "Somewhere in DCU"
-      },
-      "description": "Damian's talk will look at the portrayal of computer hackers in the movies, how they are represented in terms of the age, gender, profession, etc. and how this portrayal has evolved over the decades, and it will also will look at the depiction of the types of things hackers can do in the movies as opposed to real life"
-    }]
-  }, {
-    "day": "Wednesday",
-    "description": "HEAnet",
-    "events": [{
-      "name": "Admins, Tales of Progress - With live demo",
-      "by": "Terry Bolt & Cian Butler",
-      "time": "12:00",
-      "place": {
-        "id": "The Mezz",
-        "map": "Somewhere in DCU"
-      },
-      "description": "Progress has been made to Redbrick 2.0 but how will it work. Terry and Cian have a live demo to show you how."
-    }, {
-      "name": "MiRo Advisory",
-      "by": "Ben A crawford",
-      "time": "13:00",
-      "place": {
-        "id": "The Mezz",
-        "map": "Somewhere in DCU"
-      },
-      "description": "WhiteHack: Smart Meter Security in 56 million homes"
-    }, {
-      "name": "Lunch",
-      "by": "Somewhere in DCU",
-      "time": "14:00",
-      "place": {
-        "id": "The Mezz",
-        "map": "Somewhere in DCU"
-      },
-      "description": "Lunch"
-    }, {
-      "name": "Imprecise Network Monitoring Tools",
-      "by": "Brian Nisbet - HEAnet (Network Operations Manager)",
-      "time": "15:00",
-      "place": {
-        "id": "The Mezz",
-        "map": "Somewhere in DCU"
-      },
-      "description": "Any problem can have multiple causes and a vital part of troubleshooting is to gather as much data as possible. However not all problems (or solutions) are evident from deployed monitoring tools. Substantial data can be gleaned from social networking sites such as Twitter and Facebook and crowdsourcing your info can really help when local contacts can't be reached. This talk is liberally dosed with caveats and searching Instagram for pictures of dug up fibre should never be used in preference to well configured network monitoring tools! "
-    }, {
-      "name": "Intro To GoLang",
-      "by": "Voy",
-      "time": "16:00",
-      "place": {
-        "id": "The Mezz",
-        "map": "Somewhere in DCU"
-      },
-      "description": "GO"
-    }, {
-      "name": "Working Together: Le and Private Sector Botnet Takedowns",
-      "by": "Alan Neville (anev) - Symantec, Threat Intelligence Analyst",
-      "time": "17:00",
-      "place": {
-        "id": "The Mezz",
-        "map": "Somewhere in DCU"
-      },
-      "description": "Computer criminals regularly construct large distributed attack networks known as botnets.These networks are comprised of hijacked computers that an attacker can use to send spam, commit financial fraud or launch cyber - attacks.This talk aims to describe the approaches of botnet takedowns from the perspective of law enforcement agencies and the AV industry using examples from recent take - downs and discusses success stories when private and public sect Anev will go through case study of take down effort for zeroaccess botnet which was done by symantec and give an example of the gameoverzeus botnet takedown we conducted in conjunction with the FBI and the UK cyber crime unit and show the difference it made working with LE."
-    }]
-  }, {
-    "day": "Thursday",
-    "description": "Google",
-    "events": [{
-      "name": "The Challenges of Machine Learning at Scale",
-      "by": "Graham Poulter",
-      "time": "12:00",
-      "place": {
-        "id": "The Mezz",
-        "map": "Somewhere in DCU"
-      },
-      "description": "Aoife wants to predict how likely you are to click on an ad, to help Google decide whether to show it. With the machine learning mathematics all done, shouldn't it be easy: just train the model and make predictions? Not so fast. We'll see how Aoife overcomes the obstacles that stand between her machine learning model and the world. For starters: she has to train it on petabytes of data, continually arriving, and have it serve millions of predictions a second. Graham Poulter is a Site Reliability Engineer on Google's machine learning pipelines for ads, having moved here from South Africa three years ago. He's done some machine learning before, but was amazed to see that scaling up machine learning is a whole lot harder than one might imagine."
-    }, {
-      "name": "Designing Large Scale Distributed Systems",
-      "by": "Remigiusz Modrzejewski",
-      "time": "12:40",
-      "place": {
-        "id": "The Mezz",
-        "map": "Somewhere in DCU"
-      },
-      "description": "This talk will cover some very high-level principles for distributed system design."
-    }, {
-      "name": "An evolution of Automation",
-      "by": "John Looney",
-      "time": "13:20",
-      "place": {
-        "id": "The Mezz",
-        "map": "Somewhere in DCU"
-      },
-      "description": " In software engineering, it is rare for the final version of a solution to be decided before implementation starts.Everything changes;engineers, experience, problems faced, and lessons learned from failure.This talk will explore why it 's important to try many different avenues, to fully understand the problem space, before being sure that a solution is optimal."
-    }, {
-      "name": "Lunch",
-      "by": "Somewhere in DCU",
-      "time": "14:00",
-      "place": {
-        "id": "The Mezz",
-        "map": "Somewhere in DCU"
-      },
-      "description": "Eat"
-    }, {
-      "name": "Expecting the Unexpected",
-      "by": "Ryan Thomas",
-      "time": "15:00",
-      "place": {
-        "id": "The Mezz",
-        "map": "Somewhere in DCU"
-      },
-      "description": "Things break - all the time. At Google scale we're statistically certain that at any given time, somewhere, something is broken. We still have deliver a great service to users. By deliberately breaking things in a controlled fashion, Google's Disaster Readiness Testing is one of the methods we use to objectively test our ability to handle failure."
-    }, {
-      "name": "10 Practical Tips for Writing an Attention-Getting CV \n Interviewing at Google",
-      "by": "Rebecca O'Farrell/Anam Acktar, Ryan Thomas and Graham Poulter",
-      "time": "15:40",
-      "place": {
-        "id": "The Mezz",
-        "map": "Somewhere in DCU"
-      },
-      "description": "Learn tips from members of Google's recruiting team about how to put together a memorable CV. Two of our Site Reliability Engineers will also do a demo coding interview and will provide tips on how to approach the process."
-    }, {
-      "name": "Google Intern Panel",
-      "by": "Google",
-      "time": "16:20",
-      "place": {
-        "id": "The Mezz",
-        "map": "Somewhere in DCU"
-      },
-      "description": "Hear from past and future Google interns currently studying at DCU about their experiences in this panel discussion."
-    }]
-  }, {
-    "day": "Friday",
-    "description": "Irish Tech Community & HubSpot",
-    "events": [{
-      "name": " 'N' things we learned about deploying cloud applications",
-      "by": "Tony Ayres - Senior Architect@DCU",
-      "time": "12:00pm",
-      "place": {
-        "id": "The Mezz",
-        "map": "Somewhere in DCU"
-      },
-      "description": "The trials and tribulations of building and deploying software on a cloud platform(AWS).A discussion of the silly, simple mistakes that cause you to have to work the weekend...and how to avoid them."
-    }, {
-      "name": "Distributed Computing at Scale",
-      "by": "Anton Whalley - Solutions Architect - Strongloop@IBM \n Aman Kohli - Lead Mobile Architect@Citi",
-      "time": "1:00pm",
-      "place": {
-        "id": "The Mezz",
-        "map": "Somewhere in DCU"
-      },
-      "description": "Distributed Computing on a Massive Scale: \n Living with Decentralization, P2P and the new Web. In this talk we discuss the forces pulling towards a new web, moving from overly centralised infrastructures to scalable decentralisation and distribution."
-    }, {
-      "name": "How to Build a Web App in ReactJS",
-      "by": "Cian McMahon & Rob Campion - Hubspot",
-      "time": "2:00pm",
-      "place": {
-        "id": "The Mezz",
-        "map": "Somewhere in DCU"
-      },
-      "description": "You\u2019ll get an intro to what React is, how to get started with it, and also learn about React Router and Redux"
-    }, {
-      "name": "Lunch & Networking",
-      "by": "Somewhere in DCU",
-      "time": "3:00pm",
-      "place": {
-        "id": "The Mezz",
-        "map": "Somewhere in DCU"
-      },
-      "description": "Somewhere in DCU"
-    }]
-  }]
+  "days": [
+    {
+      "day": "Monday",
+      "description": "Associates",
+      "events": [
+        {
+          "name": "Opening Event",
+          "by": "Redbrick DCU's Computer Networking Society",
+          "time": "13:00",
+          "place": {
+            "id": "The Mezz",
+            "map": "Somewhere in DCU"
+          },
+          "description": "Opening of TechWeek 2016"
+        },
+        {
+          "name": "Lunch",
+          "by": "Somewhere in DCU",
+          "time": "14:00",
+          "place": {
+            "id": "The Mezz",
+            "map": "Somewhere in DCU"
+          },
+          "description": "Lunch Time!"
+        },
+        {
+          "name": "Competitive Programming = Money",
+          "by": "Cian Ruane & Noah Donnelly",
+          "time": "15:00",
+          "place": {
+            "id": "The Mezz",
+            "map": "Somewhere in DCU"
+          },
+          "description": "Where do you picture yourself in 5 years? How\u2019s your relationship with your parents? Do you feel a longing for meaning and direction in your life? In this talk Cian Ruane and Noah Donnelly will introduce you to the world of competitive programming."
+        },
+        {
+          "name": "Fergus O'Dea (NDRC)",
+          "by": "Fergus O'Dea",
+          "time": "16:00",
+          "place": {
+            "id": "The Mezz",
+            "map": "Somewhere in DCU"
+          },
+          "description": "A session on what's involved in a tech startup raising an initial round of funding given by Fergus O'Dea from NDRC (National Digital Research Centre), a leading investor in early-stage digital startups."
+        },
+        {
+          "name": "OpenStack - an Intro",
+          "by": "Graham Hayes - Openstack Designate Project Team Leader",
+          "time": "17:00",
+          "place": {
+            "id": "The Mezz",
+            "map": "Somewhere in DCU"
+          },
+          "description": "An over of what OpenStack is, and how you can use it, I will cover the main projects available in OpenStack, what they do, and how they link together. I will also cover how you can get involved. https://graham.hayes.ie"
+        }
+      ]
+    },
+    {
+      "day": "Tuesday",
+      "description": "Associates",
+      "events": [
+        {
+          "name": "Citrix Workspace Cloud",
+          "by": "Nicholas Connolly - Citrix",
+          "time": "12:00",
+          "place": {
+            "id": "The Mezz",
+            "map": "Somewhere in DCU"
+          },
+          "description": "Citrix Workspace Cloud (CWC) is a serviced-based product to deliver workspaces. Citrix describes this as \u201ca cloud-based control plane that enables partners and customers to unify, secure and deliver workspace services"
+        },
+        {
+          "name": "Prometheus: A Next Generation Monitoring System",
+          "by": "Brian Brazil - Robust Perception",
+          "time": "13:00",
+          "place": {
+            "id": "The Mezz",
+            "map": "Somewhere in DCU"
+          },
+          "description": "Prometheus is a scalable, reliabile, easy to use and powerful monitoring system. This talk will look at the ideas behind it and how you can take advantage of them. Since publicly launching the open source project, over a year ago, over 100 companies have now rely on it and to date there are over 250 contributers to the codebase."
+        },
+        {
+          "name": "Lunch",
+          "by": "Somewhere in DCU",
+          "time": "14:00",
+          "place": {
+            "id": "The Mezz",
+            "map": "Somewhere in DCU"
+          },
+          "description": "Lunch Time!"
+        },
+        {
+          "name": "Hackers in the Movies",
+          "by": "Damian Gordoni - DIT Universal Design RG",
+          "time": "17:00",
+          "place": {
+            "id": "The Mezz",
+            "map": "Somewhere in DCU"
+          },
+          "description": "Damian's talk will look at the portrayal of computer hackers in the movies, how they are represented in terms of the age, gender, profession, etc. and how this portrayal has evolved over the decades, and it will also will look at the depiction of the types of things hackers can do in the movies as opposed to real life"
+        }
+      ]
+    },
+    {
+      "day": "Wednesday",
+      "description": "HEAnet",
+      "events": [
+        {
+          "name": "Admins, Tales of Progress - With live demo",
+          "by": "Terry Bolt & Cian Butler",
+          "time": "12:00",
+          "place": {
+            "id": "The Mezz",
+            "map": "Somewhere in DCU"
+          },
+          "description": "Progress has been made to Redbrick 2.0 but how will it work. Terry and Cian have a live demo to show you how."
+        },
+        {
+          "name": "MiRo Advisory",
+          "by": "Ben A crawford",
+          "time": "13:00",
+          "place": {
+            "id": "The Mezz",
+            "map": "Somewhere in DCU"
+          },
+          "description": "WhiteHack: Smart Meter Security in 56 million homes"
+        },
+        {
+          "name": "Lunch",
+          "by": "Somewhere in DCU",
+          "time": "14:00",
+          "place": {
+            "id": "The Mezz",
+            "map": "Somewhere in DCU"
+          },
+          "description": "Lunch"
+        },
+        {
+          "name": "Imprecise Network Monitoring Tools",
+          "by": "Brian Nisbet - HEAnet (Network Operations Manager)",
+          "time": "15:00",
+          "place": {
+            "id": "The Mezz",
+            "map": "Somewhere in DCU"
+          },
+          "description": "Any problem can have multiple causes and a vital part of troubleshooting is to gather as much data as possible. However not all problems (or solutions) are evident from deployed monitoring tools. Substantial data can be gleaned from social networking sites such as Twitter and Facebook and crowdsourcing your info can really help when local contacts can't be reached. This talk is liberally dosed with caveats and searching Instagram for pictures of dug up fibre should never be used in preference to well configured network monitoring tools! "
+        },
+        {
+          "name": "Intro To GoLang",
+          "by": "Voy",
+          "time": "16:00",
+          "place": {
+            "id": "The Mezz",
+            "map": "Somewhere in DCU"
+          },
+          "description": "GO"
+        },
+        {
+          "name": "Working Together: Le and Private Sector Botnet Takedowns",
+          "by": "Alan Neville (anev) - Symantec, Threat Intelligence Analyst",
+          "time": "17:00",
+          "place": {
+            "id": "The Mezz",
+            "map": "Somewhere in DCU"
+          },
+          "description": "Computer criminals regularly construct large distributed attack networks known as botnets.These networks are comprised of hijacked computers that an attacker can use to send spam, commit financial fraud or launch cyber - attacks.This talk aims to describe the approaches of botnet takedowns from the perspective of law enforcement agencies and the AV industry using examples from recent take - downs and discusses success stories when private and public sect Anev will go through case study of take down effort for zeroaccess botnet which was done by symantec and give an example of the gameoverzeus botnet takedown we conducted in conjunction with the FBI and the UK cyber crime unit and show the difference it made working with LE."
+        }
+      ]
+    },
+    {
+      "day": "Thursday",
+      "description": "Google",
+      "events": [
+        {
+          "name": "The Challenges of Machine Learning at Scale",
+          "by": "Graham Poulter",
+          "time": "12:00",
+          "place": {
+            "id": "The Mezz",
+            "map": "Somewhere in DCU"
+          },
+          "description": "Aoife wants to predict how likely you are to click on an ad, to help Google decide whether to show it. With the machine learning mathematics all done, shouldn't it be easy: just train the model and make predictions? Not so fast. We'll see how Aoife overcomes the obstacles that stand between her machine learning model and the world. For starters: she has to train it on petabytes of data, continually arriving, and have it serve millions of predictions a second. Graham Poulter is a Site Reliability Engineer on Google's machine learning pipelines for ads, having moved here from South Africa three years ago. He's done some machine learning before, but was amazed to see that scaling up machine learning is a whole lot harder than one might imagine."
+        },
+        {
+          "name": "Designing Large Scale Distributed Systems",
+          "by": "Remigiusz Modrzejewski",
+          "time": "12:40",
+          "place": {
+            "id": "The Mezz",
+            "map": "Somewhere in DCU"
+          },
+          "description": "This talk will cover some very high-level principles for distributed system design."
+        },
+        {
+          "name": "An evolution of Automation",
+          "by": "John Looney",
+          "time": "13:20",
+          "place": {
+            "id": "The Mezz",
+            "map": "Somewhere in DCU"
+          },
+          "description": " In software engineering, it is rare for the final version of a solution to be decided before implementation starts.Everything changes;engineers, experience, problems faced, and lessons learned from failure.This talk will explore why it 's important to try many different avenues, to fully understand the problem space, before being sure that a solution is optimal."
+        },
+        {
+          "name": "Lunch",
+          "by": "Somewhere in DCU",
+          "time": "14:00",
+          "place": {
+            "id": "The Mezz",
+            "map": "Somewhere in DCU"
+          },
+          "description": "Eat"
+        },
+        {
+          "name": "Expecting the Unexpected",
+          "by": "Ryan Thomas",
+          "time": "15:00",
+          "place": {
+            "id": "The Mezz",
+            "map": "Somewhere in DCU"
+          },
+          "description": "Things break - all the time. At Google scale we're statistically certain that at any given time, somewhere, something is broken. We still have deliver a great service to users. By deliberately breaking things in a controlled fashion, Google's Disaster Readiness Testing is one of the methods we use to objectively test our ability to handle failure."
+        },
+        {
+          "name": "10 Practical Tips for Writing an Attention-Getting CV \n Interviewing at Google",
+          "by": "Rebecca O'Farrell/Anam Acktar, Ryan Thomas and Graham Poulter",
+          "time": "15:40",
+          "place": {
+            "id": "The Mezz",
+            "map": "Somewhere in DCU"
+          },
+          "description": "Learn tips from members of Google's recruiting team about how to put together a memorable CV. Two of our Site Reliability Engineers will also do a demo coding interview and will provide tips on how to approach the process."
+        },
+        {
+          "name": "Google Intern Panel",
+          "by": "Google",
+          "time": "16:20",
+          "place": {
+            "id": "The Mezz",
+            "map": "Somewhere in DCU"
+          },
+          "description": "Hear from past and future Google interns currently studying at DCU about their experiences in this panel discussion."
+        }
+      ]
+    },
+    {
+      "day": "Friday",
+      "description": "Irish Tech Community & HubSpot",
+      "events": [
+        {
+          "name": " 'N' things we learned about deploying cloud applications",
+          "by": "Tony Ayres - Senior Architect@DCU",
+          "time": "12:00pm",
+          "place": {
+            "id": "The Mezz",
+            "map": "Somewhere in DCU"
+          },
+          "description": "The trials and tribulations of building and deploying software on a cloud platform(AWS).A discussion of the silly, simple mistakes that cause you to have to work the weekend...and how to avoid them."
+        },
+        {
+          "name": "Distributed Computing at Scale",
+          "by": "Anton Whalley - Solutions Architect - Strongloop@IBM \n Aman Kohli - Lead Mobile Architect@Citi",
+          "time": "1:00pm",
+          "place": {
+            "id": "The Mezz",
+            "map": "Somewhere in DCU"
+          },
+          "description": "Distributed Computing on a Massive Scale: \n Living with Decentralization, P2P and the new Web. In this talk we discuss the forces pulling towards a new web, moving from overly centralised infrastructures to scalable decentralisation and distribution."
+        },
+        {
+          "name": "How to Build a Web App in ReactJS",
+          "by": "Cian McMahon & Rob Campion - Hubspot",
+          "time": "2:00pm",
+          "place": {
+            "id": "The Mezz",
+            "map": "Somewhere in DCU"
+          },
+          "description": "You\u2019ll get an intro to what React is, how to get started with it, and also learn about React Router and Redux"
+        },
+        {
+          "name": "Lunch & Networking",
+          "by": "Somewhere in DCU",
+          "time": "3:00pm",
+          "place": {
+            "id": "The Mezz",
+            "map": "Somewhere in DCU"
+          },
+          "description": "Somewhere in DCU"
+        }
+      ]
+    }
+  ]
 }

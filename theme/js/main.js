@@ -1,10 +1,10 @@
 $(document).ready(() => {
   const currHash = getHash();
   $('h5').each(function (c) {
-    $(this).css({color: colors[(views + c) % 5]});
+    $(this).css({ color: colors[(views + c) % 5] });
   });
   $('.collapsible').collapsible();
-  $('header h1 span').css({color: colors[(views + 3) % 5]});
+  $('header h1 span').css({ color: colors[(views + 3) % 5] });
 
   if (typeof currHash !== 'boolean') {
     $(`li[data-hash="${currHash}"] > div`).trigger('click');
@@ -57,10 +57,13 @@ function showLive () {
     $('.countdown').hide(400, () => {
       $('.livestream').show(0, () => {
         $('video').height(0);
-        $('video').animate({
-          height : $('video').width() * (9 / 16),
-          display: 'block',
-        }, 1000);
+        $('video').animate(
+          {
+            height : $('video').width() * (9 / 16),
+            display: 'block',
+          },
+          1000
+        );
       });
     });
     liveShown = true;

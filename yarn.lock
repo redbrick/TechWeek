@@ -1577,9 +1577,9 @@ event-emitter@~0.3.5:
     d "1"
     es5-ext "~0.10.14"
 
-event-page@^1.0.7:
-  version "1.0.7"
-  resolved "https://registry.yarnpkg.com/event-page/-/event-page-1.0.7.tgz#30b734a0d1d4513f30f9bd6a1bbab00757bdefa3"
+event-page@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/event-page/-/event-page-1.2.1.tgz#1419911c5b7bec66530bfeedacc7aef134bad673"
   dependencies:
     command-line-args "^4.0.5"
     fs-extra "^3.0.1"
@@ -2234,7 +2234,7 @@ hammerjs@^2.0.4:
   version "2.0.8"
   resolved "https://registry.yarnpkg.com/hammerjs/-/hammerjs-2.0.8.tgz#04ef77862cff2bb79d30f7692095930222bf60f1"
 
-handlebars@^4.0.10, handlebars@^4.0.6:
+handlebars@^4.0.10:
   version "4.0.10"
   resolved "https://registry.yarnpkg.com/handlebars/-/handlebars-4.0.10.tgz#3d30c718b09a3d96f23ea4cc1f403c4d3ba9ff4f"
   dependencies:
@@ -2681,10 +2681,6 @@ jshint@^2.8.0:
     minimatch "~3.0.2"
     shelljs "0.3.x"
     strip-json-comments "1.0.x"
-
-json-front-matter@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/json-front-matter/-/json-front-matter-1.0.0.tgz#011ebb6de75f7ac724fc4b70a2498d18a30a2fe1"
 
 json-matter@^1.0.2:
   version "1.0.2"
@@ -4788,13 +4784,9 @@ window-size@0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/window-size/-/window-size-0.1.0.tgz#5438cd2ea93b202efa3a19fe8887aee7c94f9c9d"
 
-wordwrap@0.0.2:
+wordwrap@0.0.2, wordwrap@~0.0.2:
   version "0.0.2"
   resolved "https://registry.yarnpkg.com/wordwrap/-/wordwrap-0.0.2.tgz#b79669bb42ecb409f83d583cad52ca17eaa1643f"
-
-wordwrap@~0.0.2:
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/wordwrap/-/wordwrap-0.0.3.tgz#a3d5da6cd5c0bc0008d37234bbaf1bed63059107"
 
 wordwrap@~1.0.0:
   version "1.0.0"
