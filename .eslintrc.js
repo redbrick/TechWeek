@@ -1,66 +1,38 @@
 module.exports = {
-  "extends": "standard",
-  "env": {
-    "es6": true,
-    "jest": true,
-    "browser": true,
-    "node": true,
-    "jquery": true
+  extends: ['airbnb'],
+  env: {
+    es6: true,
+    jest: true,
+    browser: true,
+    node: true,
+    jquery: true,
   },
-  "plugins": [
-    "json"
-  ],
-  "globals": {
-    "GENTLY": true,
-    "start": true
+  plugins: ['json'],
+  globals: {
+    GENTLY: true,
+    start: true,
   },
-  "rules": {
-    "no-console": 0,
-    "no-multi-spaces": 0,
-    "comma-dangle": [
-      "error",
-      "always-multiline"
-    ],
-    "key-spacing": [
-      "error",
+  rules: {
+    'linebreak-style': ['error', 'unix'],
+    'arrow-parens': ['error', 'as-needed'],
+    'no-param-reassign': ['error', { props: false }],
+    'func-style': ['error', 'declaration', { allowArrowFunctions: true }],
+    'no-use-before-define': ['error', { functions: false }],
+    'no-shadow': [
+      'error',
       {
-        "multiLine": {
-          "beforeColon": false,
-          "afterColon": true
-        },
-        "align": {
-          "beforeColon": false,
-          "afterColon": true,
-          "on": "colon",
-          "mode": "strict"
-        }
-      }
+        builtinGlobals: true,
+        hoist: 'functions',
+        allow: ['resolve', 'reject', 'err'],
+      },
     ],
-    "indent": [
-      "error",
-      2
-    ],
-    "linebreak-style": [
-      "error",
-      "unix"
-    ],
-    "quotes": [
-      "error",
-      "single"
-    ],
-    "semi": [
-      "error",
-      "always"
-    ],
-    "no-var": [
-      "error"
-    ],
-    "prefer-const": [
-      "error",
+    'consistent-return': 0,
+    'key-spacing': [
+      'error',
       {
-        "destructuring": "any",
-        "ignoreReadBeforeAssign": false
-      }
-    ]
-  }
-}
+        multiLine: { beforeColon: false, afterColon: true },
+        align: { beforeColon: false, afterColon: true, on: 'colon', mode: 'strict' },
+      },
+    ],
+  },
+};

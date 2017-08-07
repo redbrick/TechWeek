@@ -31,9 +31,9 @@ gulp.task('compress', () =>
         exclude    : ['tasks'],
         noSource   : true,
         ignoreFiles: ['.combo.js', '*.min.js'],
-      })
+      }),
     )
-    .pipe(gulp.dest('theme/js'))
+    .pipe(gulp.dest('theme/js')),
 );
 
 gulp.task('css', ['generate'], () =>
@@ -44,9 +44,9 @@ gulp.task('css', ['generate'], () =>
     .pipe(
       uncss({
         html: ['./**/*.html'],
-      })
+      }),
     )
-    .pipe(gulp.dest('dist/css'))
+    .pipe(gulp.dest('dist/css')),
 );
 
 gulp.task('webserver', ['default'], () => {
@@ -62,5 +62,5 @@ gulp.task('html', () => gulp.src('./**/*.html').pipe(connect.reload()));
 gulp.task('generate', ['compress'], shell.task('yarn run event-gen'));
 
 gulp.task('default', ['css'], () =>
-  gulp.src('dist/**/*.html').pipe(htmlmin({ collapseWhitespace: true })).pipe(gulp.dest('dist'))
+  gulp.src('dist/**/*.html').pipe(htmlmin({ collapseWhitespace: true })).pipe(gulp.dest('dist')),
 );
