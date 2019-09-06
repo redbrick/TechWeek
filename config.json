@@ -1,21 +1,28 @@
 {
   "title": "TechWeek",
   "source": "pages",
-  "output": "dist",
+  "output": {
+    "dir": "dist"
+  },
+  "static": ["js", "font", "images"],
   "menu": [
     {
       "title": "Home",
       "url": ""
-    }, {
+    },
+    {
       "title": "2016",
       "url": "2016"
-    }, {
+    },
+    {
       "title": "2015",
       "url": "2015"
-    }, {
+    },
+    {
       "title": "2014",
       "url": "2014"
-    }, {
+    },
+    {
       "title": "Call For Talks",
       "url": "CFT"
     }

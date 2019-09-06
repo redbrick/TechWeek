@@ -1,5 +1,4 @@
 const gulp = require('gulp');
-const sass = require('gulp-sass');
 const concat = require('gulp-concat');
 const cleanCSS = require('gulp-clean-css');
 const minify = require('gulp-minify');
@@ -11,44 +10,44 @@ const htmlmin = require('gulp-htmlmin');
 const uncss = require('gulp-uncss');
 
 gulp.task('dev', ['webserver'], () => {
-  gulp.watch(['./css/*.scss', './js/*.js', './templates/*.hbs', './**/*.json', './**/*.md'], [
-    'scss',
-    'compress',
-    'generate',
-    'html',
-  ]);
+  gulp.watch(['./theme/css/*.scss', './theme/js/*.js', './theme/templates/*.hbs', './pages/**/*'], ['css', 'html']);
 });
 
-gulp.task('compress', () => gulp
-  .src([
-    './node_modules/jquery/dist/jquery.js',
-    './js/*.js',
-    './node_modules/materialize-css/dist/js/materialize.js',
-  ])
-  .pipe(concat('main.js'))
-  .pipe(babel())
-  .pipe(
-    minify({
-      ext: {
-        min: '.min.js',
-      },
-      exclude    : ['tasks'],
-      noSource   : true,
-      ignoreFiles: ['.combo.js', '*.min.js'],
-    })
-  )
-  .pipe(gulp.dest('dist/js')));
-
-gulp.task('scss', ['generate'], () =>
+gulp.task('compress', () =>
   gulp
-    .src('css/main.scss')
-    .pipe(sass())
+    .src([
+      './node_modules/jquery/dist/jquery.js',
+      '!./theme/js/*.min.js',
+      './theme/js/*.js',
+      './node_modules/materialize-css/dist/js/materialize.js',
+    ])
+    .pipe(concat('main.js'))
+    .pipe(babel())
+    .pipe(
+      minify({
+        ext: {
+          min: '.min.js',
+        },
+        exclude    : ['tasks'],
+        noSource   : true,
+        ignoreFiles: ['.combo.js', '*.min.js'],
+      }),
+    )
+    .pipe(gulp.dest('theme/js')),
+);
+
+gulp.task('css', ['generate'], () =>
+  gulp
+    .src('dist/css/main.css')
     .pipe(cleanCSS({ compatibility: 'ie8', processImport: false }))
     .pipe(rename({ suffix: '.min' }))
-    .pipe(uncss({
-      html: ['./**/*.html'],
-    }))
-    .pipe(gulp.dest('dist/css')));
+    .pipe(
+      uncss({
+        html: ['./**/*.html'],
+      }),
+    )
+    .pipe(gulp.dest('dist/css')),
+);
 
 gulp.task('webserver', ['default'], () => {
   connect.server({
@@ -58,12 +57,10 @@ gulp.task('webserver', ['default'], () => {
   });
 });
 
-gulp.task('fonts', () =>
-  gulp.src('./node_modules/materialize-css/fonts/**').pipe(gulp.dest('dist/fonts')));
-
 gulp.task('html', () => gulp.src('./**/*.html').pipe(connect.reload()));
 
-gulp.task('generate', shell.task('node bin/generate.js'));
+gulp.task('generate', ['compress'], shell.task('yarn run event-gen'));
 
-gulp.task('default', ['compress', 'scss', 'fonts'], () =>
-  gulp.src('dist/**/*.html').pipe(htmlmin({ collapseWhitespace: true })).pipe(gulp.dest('dist')));
+gulp.task('default', ['css'], () =>
+  gulp.src('dist/**/*.html').pipe(htmlmin({ collapseWhitespace: true })).pipe(gulp.dest('dist')),
+);

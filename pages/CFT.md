@@ -1,8 +1,9 @@
-{{{
+{
   "title": "Call For Talks",
   "template": "message"
-}}}
+}
 
+---
 
 Once again Redbrick are organising Techweek and are looking for people to come and talk to our members, and we'd like to hear from you! Talks we've had in the past can be found at techweek.dcu.ie.
 This year we are looking for talks that fit the following themes.
