@@ -1,0 +1,24 @@
+---
+version: 2.1
+jobs:
+  build:
+    working_directory: ~/TechWeek
+    docker:
+      - image: circleci/node:10.16.3
+    steps:
+      - checkout
+      - run:
+          name: Install Yarn
+          command: 'sudo npm install -g yarn@latest'
+      - restore_cache:
+          key: dependency-cache-{{ checksum "yarn.lock" }}
+      - run:
+          name: Install dep
+          command: yarn
+      - save_cache:
+          key: dependency-cache-{{ checksum "yarn.lock" }}
+          paths:
+            - ./node_modules
+      - run:
+          name: test
+          command: npm test
