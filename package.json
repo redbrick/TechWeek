@@ -22,7 +22,7 @@
   "homepage": "https://github.com/redbrick/techweek.dcu.ie#readme",
   "dependencies": {
     "event-page": "^1.2.1",
-    "jquery": "^3.4.0",
+    "jquery": "^3.5.0",
     "materialize-css": "^0.97.7"
   },
   "devDependencies": {
